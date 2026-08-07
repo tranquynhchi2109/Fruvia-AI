@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruvia AI — Nhận diện & Tìm kiếm Trái cây bằng AI</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .landing-hero {
+      padding: var(--space-2xl) 0;
+      text-align: center;
+      background: radial-gradient(circle at top, var(--color-primary-light) 0%, transparent 70%);
+    }
+    .landing-hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: var(--space-md);
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-xl);
+      margin: var(--space-2xl) 0;
+    }
+    .feature-card {
+      background-color: var(--color-bg-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      position: relative;
+    }
+    .feature-card.coming-soon {
+      opacity: 0.85;
+      background-color: var(--color-bg-subtle);
+    }
+    .feature-badge {
+      align-self: flex-start;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+    }
+    .badge-active {
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
+      border: 1px solid var(--color-primary-border);
+    }
+    .badge-disabled {
+      background-color: #e2e8f0;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Trang chủ Fruvia AI">
+        <span class="logo-icon" aria-hidden="true">🍇</span>
+        <span>Fruvia AI</span>
+        <span class="brand-badge">v1.0</span>
+      </a>
+      <div class="header-status">
+        <div id="backend-status" class="status-badge" data-status="unknown" aria-live="polite">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="status-text">Đang kiểm tra Backend...</span>
+        </div>
+        <a href="retrieval.html" class="btn btn-primary btn-sm">Tìm kiếm ảnh</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="landing-hero">
+      <h1>Nhận diện Trái cây thông minh bằng AI</h1>
+      <p class="hero-subtitle">
+        Khám phá các loại trái cây tương đồng bằng công nghệ Deep Learning (DINOv2) và tìm kiếm vector trên Qdrant Cloud.
+      </p>
+    </section>
+
+    <section class="features-grid">
+      <!-- Tính năng 1: Tìm kiếm hình ảnh -->
+      <article class="feature-card">
+        <span class="feature-badge badge-active">Đang hoạt động</span>
+        <h2>Tìm kiếm Hình ảnh Tương đồng</h2>
+        <p>
+          Tải lên hình ảnh trái cây để tìm các mẫu trái cây tương tự trong bộ dữ liệu. Sử dụng DINOv2 embeddings 768 chiều và tìm kiếm Cosine Similarity.
+        </p>
+        <div style="margin-top: auto;">
+          <a href="retrieval.html" class="btn btn-primary" style="width: 100%;">
+            Thử Tìm kiếm Ảnh →
+          </a>
+        </div>
+      </article>
+
+      <!-- Tính năng 2: Phân loại trái cây -->
+      <article class="feature-card">
+        <span class="feature-badge badge-active">Đang hoạt động</span>
+        <h2>Phân loại Trái cây</h2>
+        <p>
+          Nhận diện loại trái cây tự động bằng mô hình Deep Learning với Top-3 dự đoán kèm điểm Confidence.
+        </p>
+        <div style="margin-top: auto;">
+          <a href="classify.html" class="btn btn-primary" style="width: 100%;">
+            Thử Phân loại →
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Fruvia AI. Xây dựng cho nhận diện trái cây và tìm kiếm vector.</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    // Header health ping
+    document.addEventListener("DOMContentLoaded", async () => {
+      const badge = document.getElementById("backend-status");
+      const statusText = document.getElementById("status-text");
+      try {
+        const health = await ApiClient.getHealth();
+        if (health.status === "ok") {
+          badge.setAttribute("data-status", "online");
+          statusText.textContent = "Backend Trực tuyến";
+        } else {
+          badge.setAttribute("data-status", "degraded");
+          statusText.textContent = "Backend Giảm chất lượng";
+        }
+      } catch (err) {
+        badge.setAttribute("data-status", "offline");
+        statusText.textContent = "Backend Ngoại tuyến";
+      }
+    });
+  </script>
+</body>
+</html>
