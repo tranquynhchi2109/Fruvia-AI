@@ -28,6 +28,21 @@ class ClassificationResponse(BaseModel):
     message: str = Field(default="", description="Human-readable status message")
     processing_time_ms: float = Field(..., description="Inference time in milliseconds")
 
+    # Engine & Metadata
+    inference_method: str = Field(
+        default="convnext_tiny",
+        description="Model architecture or method used (e.g., convnext_tiny, dinov2_qdrant_knn)",
+    )
+    model_name: str = Field(default="convnext_tiny", description="Identifier of the model")
+    model_source: str = Field(
+        default="trained_artifact",
+        description="Source of prediction: trained_artifact | retrieval_knn_fallback | unavailable",
+    )
+    model_ready: bool = Field(default=True, description="Whether classification model is ready")
+    is_fallback: bool = Field(
+        default=False, description="Whether prediction used a fallback mechanism"
+    )
+
 
 class ClassificationErrorResponse(BaseModel):
     """Error response for classification failures."""

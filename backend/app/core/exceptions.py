@@ -88,6 +88,14 @@ class ModelNotLoadedError(FruviaError):
     message = "The classification model is not loaded. Please try again later."
 
 
+class ModelLoadError(FruviaError):
+    """Raised when loading a model artifact fails."""
+
+    status_code = 500
+    error_code = "MODEL_LOAD_FAILED"
+    message = "Failed to load model weights artifact."
+
+
 class ImageEncodingError(FruviaError):
     """Raised when feature extraction with DINOv2 fails."""
 

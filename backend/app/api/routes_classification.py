@@ -9,7 +9,7 @@ from typing import Annotated
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
 from starlette.concurrency import run_in_threadpool
 
-from app.core.exceptions import ImageValidationError
+from app.core.exceptions import ImageValidationError, ModelNotLoadedError
 from app.schemas.classification import ClassificationResponse
 from app.services.classification_service import ClassificationService, get_classification_service
 
@@ -41,14 +41,25 @@ async def classify_image(
             detail="top_k must be between 1 and 10.",
         )
 
+    if not service.classifier.is_loaded or service.classifier.model_source == "unavailable":
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Fruit classification model is not available.",
+        )
+
     file_bytes = await file.read()
 
-    response = await run_in_threadpool(
-        service.classify_image,
-        file_bytes=file_bytes,
-        filename=file.filename,
-        top_k=top_k,
-        content_type=file.content_type,
-    )
-
-    return response
+    try:
+        response = await run_in_threadpool(
+            service.classify_image,
+            file_bytes=file_bytes,
+            filename=file.filename,
+            top_k=top_k,
+            content_type=file.content_type,
+        )
+        return response
+    except ModelNotLoadedError as e:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail=e.message,
+        ) from e

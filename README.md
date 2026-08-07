@@ -4,12 +4,10 @@ AI-powered fruit recognition and image retrieval system using deep learning.
 
 ## Project Goal
 
-Fruvia AI provides two independent AI capabilities:
+Fruvia AI provides two independent, fully operational AI capabilities:
 
-1. **Fruit Classification** — Upload an image, get top-3 fruit predictions with confidence scores
-2. **Image Retrieval** — Upload an image, find visually similar fruit images via vector search (*Implemented & Active*)
-
-> **Note on Implementation Status**: The **Image Retrieval backend** is fully implemented and hardened (DINOv2 embeddings + Qdrant Cloud collection `fruvia_fruits360_original_dinov2_base_v1`). Fruit Classification endpoints and Frontend web application are currently **NOT YET IMPLEMENTED** (scheduled for future phases).
+1. **Fruit Classification** — Upload an image, get top-K fruit predictions with confidence scores using trained PyTorch models (ConvNeXt-Tiny / EfficientNet-B0) or DINOv2 + Qdrant 20-kNN similarity-weighted voting fallback.
+2. **Image Retrieval** — Upload an image, find visually similar fruit images via vector search using DINOv2 768-dim embeddings and Qdrant Cloud vector database (`fruvia_fruits360_original_dinov2_base_v1`).
 
 ## System Architecture
 
@@ -27,32 +25,42 @@ Fruvia AI provides two independent AI capabilities:
 │  └──────────┘  └─────┬─────┘  └────────┬─────────┘  │
 │                      │                 │             │
 │         ┌────────────▼───┐   ┌─────────▼──────────┐ │
-│         │  ConvNeXt-Tiny │   │  DINOv2 Encoder    │ │
-│         │  Classifier    │   │  (768-dim vectors) │ │
-│         └────────────────┘   └─────────┬──────────┘ │
-│                                        │             │
-│                              ┌─────────▼──────────┐ │
-│                              │  Qdrant Repository  │ │
-│                              └─────────┬──────────┘ │
+│         │ FruitClassifier│   │  DINOv2 Encoder    │ │
+│         │ (Multi-Engine) │   │  (768-dim vectors) │ │
+│         └──────┬───────┬─┘   └─────────┬──────────┘ │
+│                │       │               │             │
+│   ┌────────────▼──┐ ┌──▼───────────────▼──────────┐ │
+│   │ Trained Model │ │   Qdrant Repository         │ │
+│   │ (ConvNeXt/    │ │ (kNN Fallback / Retrieval) │ │
+│   │ EfficientNet) │ └──────────────────┬──────────┘ │
+│   └───────────────┘                    │             │
 └────────────────────────────────────────┼────────────┘
                                          │
                                ┌─────────▼──────────┐
                                │   Qdrant Cloud     │
                                │ (Vector Database)  │
+                               │ 20-kNN Voting      │
                                └────────────────────┘
 ```
 
-### Classification Flow
+### Classification Engine Hierarchy
 
-```
-User uploads image
-    → Validate (format, size, integrity)
-    → Preprocess (resize 224×224, normalize)
-    → ConvNeXt-Tiny inference
-    → Softmax → Top-3 predictions
-    → Confidence threshold check
-    → Return predictions + accepted flag
-```
+1. **Primary: Trained PyTorch Model**
+   - Supports StateDict, Checkpoint Dict, Full Module, and TorchScript (`.pth`, `.pt`).
+   - Architectures: `convnext_tiny`, `efficientnet_b0`, `mobilenet_v3_small`.
+   - Validated against canonical 18 target classes (`configs/classes.yaml`).
+
+2. **Fallback: DINOv2 + Qdrant 20-kNN Similarity-Weighted Voting**
+   - Active when no trained model file is present in `models/classifier/`.
+   - Encodes query image via DINOv2 (`facebook/dinov2-base`, 768-dim L2-normalized vector).
+   - Queries Qdrant Cloud for top-20 nearest neighbors.
+   - Computes similarity-weighted voting:
+     $$\text{weight}(c) = \sum \max(\text{similarity} - 0.35, 0)$$
+   - Returns normalized probability distribution and metadata (`is_fallback: true`, `inference_method: "dinov2_qdrant_knn"`).
+
+3. **Unavailable: HTTP 503**
+   - Returned if neither a trained model artifact nor Qdrant Cloud connection is ready.
+   - **NO random neural network weights fallback is ever used.**
 
 ### Retrieval Flow
 
@@ -77,25 +85,30 @@ fruvia-ai/
 │   │   │   ├── routes_retrieval.py
 │   │   │   └── routes_fruits.py
 │   │   ├── core/                   # Config, logging, exceptions
-│   │   ├── ml/                     # ML models and preprocessing
+│   │   ├── ml/                     # ML models, classifier, encoder, preprocessing
 │   │   ├── services/               # Business logic
 │   │   ├── repositories/           # Data access (Qdrant)
 │   │   ├── schemas/                # Pydantic request/response models
 │   │   └── utils/                  # Image validation, file helpers
 │   ├── tests/
-│   │   ├── unit/                   # No external deps
-│   │   └── integration/            # May need model/Qdrant
+│   │   ├── unit/                   # Unit test suite
+│   │   └── integration/            # Integration test suite
 │   ├── requirements.txt
 │   └── Dockerfile
-├── frontend/                       # Static HTML/CSS/JS
+├── frontend/                       # Static HTML/CSS/JS UI
 ├── notebooks/                      # Colab notebooks (01–07)
-├── scripts/                        # Dataset audit, manifest, export
+├── scripts/                        # Diagnostics, dataset audit, manifest, export
+│   └── diagnose_classifier.py      # CLI Diagnostic Tool
 ├── configs/                        # YAML configuration
-│   ├── classes.yaml                # Target class list
+│   ├── classes.yaml                # Canonical target class list (18 classes)
 │   ├── class_mapping.yaml          # Original → target mapping
 │   └── training.yaml               # Training hyperparameters
 ├── data/                           # Dataset files (not committed)
 ├── models/                         # Trained model artifacts
+│   └── classifier/
+│       ├── model.pth               # Trained PyTorch model
+│       ├── model_config.json       # Architecture metadata
+│       └── preprocessing.json      # Preprocessing metadata
 ├── .env.example                    # Environment variable template
 ├── docker-compose.yml
 ├── pyproject.toml
@@ -130,11 +143,21 @@ cp .env.example .env
 # Edit .env with your Qdrant Cloud credentials
 ```
 
+### Run Diagnostic Audit Tool
+
+```bash
+# Audit model state and readiness
+python scripts/diagnose_classifier.py
+
+# Test classification on a sample image
+python scripts/diagnose_classifier.py --image path/to/sample_fruit.jpg
+```
+
 ### Run Backend
 
 ```bash
 cd backend
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 Or use Make:
@@ -153,6 +176,7 @@ python -m http.server 3000 --directory frontend
 
 Open your browser at:
 - **Landing page**: [http://localhost:3000](http://localhost:3000)
+- **Classification UI**: [http://localhost:3000/classify.html](http://localhost:3000/classify.html)
 - **Image Retrieval Web UI**: [http://localhost:3000/retrieval.html](http://localhost:3000/retrieval.html)
 
 Or use Make:
@@ -165,114 +189,8 @@ make run-frontend
 
 ```bash
 # All tests
-make test
-
-# Unit tests only
-make test-unit
-
-# Integration tests only
-make test-integration
+pytest backend/tests -v
 ```
-
-### Docker
-
-```bash
-# Build and start
-make docker-build
-make docker-up
-
-# Stop
-make docker-down
-```
-
-## Qdrant Cloud Configuration
-
-1. Create an account at [Qdrant Cloud](https://cloud.qdrant.io)
-2. Create a cluster
-3. Copy the endpoint URL and API key
-4. Set in your `.env`:
-
-```
-QDRANT_URL=https://your-cluster.qdrant.io:6333
-QDRANT_API_KEY=your-api-key-here
-```
-
-**Never commit `.env` or API keys to the repository.**
-
-## Colab Notebooks
-
-> **Notebooks are authored in the repository and executed on Google Colab.**
-> They are never run locally or in CI.
-
-### Workflow
-
-```
-GitHub repository
-  → Open notebook in Google Colab
-  → Enable T4 GPU (for embedding/training notebooks)
-  → Read KAGGLE_API_TOKEN from Colab Secrets
-  → Download Fruits-360 into /content/fruits360
-  → Process and embed on Colab
-  → Upload vectors to Qdrant Cloud
-  → Save checkpoints to Google Drive
-```
-
-| Notebook | Purpose | Runtime |
-|---|---|---|
-| `01_explore_fruits360.ipynb` | Explore and visualize the dataset | CPU |
-| `02_prepare_dataset.ipynb` | Create retrieval + classification manifests | CPU |
-| `03_train_efficientnet_baseline.ipynb` | Train EfficientNet-B0 baseline | GPU |
-| `04_train_convnext.ipynb` | Train ConvNeXt-Tiny (primary) | GPU |
-| `05_evaluate_models.ipynb` | Compare models on test set | GPU |
-| `06_generate_dinov2_embeddings.ipynb` | Generate DINOv2 image embeddings | GPU (T4) |
-| `07_upload_qdrant.ipynb` | Upload vectors to Qdrant Cloud | CPU |
-
-### Colab Secrets Required
-
-| Secret | Description / Used by |
-|---|---|
-| `KAGGLE_API_TOKEN` (or `KAGGLE_USERNAME` & `KAGGLE_KEY`) | Kaggle API credentials for downloading Fruits-360 |
-| `QDRANT_URL` | Qdrant Cloud endpoint URL (Collection: `fruvia_fruits360_original_dinov2_base_v1`) |
-| `QDRANT_API_KEY` | Qdrant Cloud API key |
-
-All data paths use `/content/` (Colab default) or Google Drive. No Windows paths.
-
-## Data Conventions
-
-- **Raw data** is never modified — stored in `data/raw/`
-- **Class mapping** is defined in `configs/class_mapping.yaml`
-- **Manifest CSV** tracks every image with metadata and split assignment
-- **Splits**: Train 70% / Validation 15% / Test 15%
-- **Random seed**: 42 (configurable in `configs/training.yaml`)
-- SHA-256 is used for duplicate detection and data-leakage mitigation
-
-## Models
-
-| Model | Role | Input | Output |
-|---|---|---|---|
-| ConvNeXt-Tiny | Classification (primary) | 224×224 RGB | Class probabilities |
-| EfficientNet-B0 | Classification (baseline) | 224×224 RGB | Class probabilities |
-| DINOv2-Base | Image embedding | Variable RGB | 768-dim L2 vector |
-
-### Confidence vs Similarity
-
-- **Confidence** (classification): Probability from softmax — how sure the model is about the predicted class. Range 0-1.
-- **Cosine Similarity** (retrieval): Geometric distance between embedding vectors — how visually similar two images are. Range 0-1 (after L2 normalization). This is NOT "accuracy."
-
-## Current Limitations
-
-- Model artifacts (`.pth` files) are not included in the repository — must be trained via Colab notebooks
-- Retrieval requires Qdrant Cloud connection — offline mode not yet supported
-- Frontend is static HTML/CSS/JS — no framework
-- No user authentication
-- No rate limiting (planned for production)
-- Model accuracy claims will be added only after Phase 3 evaluation is complete
-
-## Dataset
-
-This project uses the [Fruits-360 Original Size](https://www.kaggle.com/datasets/moltean/fruits) dataset.
-
-**Citation**: Horea Muresan, Mihai Oltean, Fruit recognition from images using deep learning, Acta Univ. Sapientiae, Informatica Vol. 10, Issue 1, pp. 26-42, 2018.
 
 ## License
 

@@ -56,8 +56,9 @@ class ClassificationService:
             content_type=content_type,
         )
 
-        # 2. Run inference
-        raw_predictions = self.classifier.predict(pil_image, top_k=top_k)
+        # 2. Run inference via classifier engine
+        result_data = self.classifier.predict(pil_image, top_k=top_k)
+        raw_predictions = result_data["predictions"]
 
         # 3. Format top predictions
         top_predictions = [
@@ -71,16 +72,27 @@ class ClassificationService:
 
         elapsed_ms = round((time.perf_counter() - start_time) * 1000, 2)
 
-        message = (
-            f"Prediction '{top_1.class_name}' accepted with {top_1.confidence * 100:.1f}% confidence."
-            if accepted
-            else f"Prediction '{top_1.class_name}' ({top_1.confidence * 100:.1f}%) is below confidence threshold ({threshold * 100:.0f}%)."
-        )
+        method = result_data.get("inference_method", "convnext_tiny")
+        is_fallback = result_data.get("is_fallback", False)
+
+        if accepted:
+            message = f"Prediction '{top_1.class_name}' accepted with {top_1.confidence * 100:.1f}% confidence."
+        elif is_fallback:
+            message = (
+                f"Prediction '{top_1.class_name}' ({top_1.confidence * 100:.1f}%) via {method} fallback "
+                f"is below confidence threshold ({threshold * 100:.0f}%)."
+            )
+        else:
+            message = (
+                f"Prediction '{top_1.class_name}' ({top_1.confidence * 100:.1f}%) "
+                f"is below confidence threshold ({threshold * 100:.0f}%)."
+            )
 
         logger.info(
-            "Classification completed for '%s' in %.2f ms. Top prediction: %s (%.2f)",
+            "Classification completed for '%s' in %.2f ms via %s. Top prediction: %s (%.2f)",
             filename,
             elapsed_ms,
+            method,
             top_1.class_name,
             top_1.confidence,
         )
@@ -92,6 +104,11 @@ class ClassificationService:
             threshold=threshold,
             message=message,
             processing_time_ms=elapsed_ms,
+            inference_method=method,
+            model_name=result_data.get("model_name", method),
+            model_source=result_data.get("model_source", "trained_artifact"),
+            model_ready=self.classifier.is_loaded,
+            is_fallback=is_fallback,
         )
 
 

@@ -14,6 +14,29 @@ from pathlib import Path
 from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+# Unified Project Root resolution (works for both local Windows and Docker)
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+
+def resolve_path(path: str | Path) -> Path:
+    """
+    Resolve path relative to PROJECT_ROOT if it is a relative path or if the
+    absolute path does not exist on the current system (e.g. Docker container paths
+    like /app/models/... when running on Windows).
+    """
+    p = Path(path)
+    if p.is_absolute():
+        if p.exists():
+            return p
+        # If absolute path doesn't exist (e.g. /app/models/...), resolve relative to PROJECT_ROOT
+        relative_parts = p.parts[1:] if p.parts[0] in ("/", "\\") else p.parts
+        # Strip leading container directory if present
+        if relative_parts and relative_parts[0] == "app":
+            relative_parts = relative_parts[1:]
+        candidate = PROJECT_ROOT.joinpath(*relative_parts)
+        return candidate
+    return (PROJECT_ROOT / p).resolve()
+
 
 class Settings(BaseSettings):
     """Central configuration read from environment / .env file."""
@@ -78,6 +101,26 @@ class Settings(BaseSettings):
     log_level: str = Field(default="INFO")
 
     # --- Derived properties ---
+
+    @property
+    def resolved_model_path(self) -> Path:
+        return resolve_path(self.model_path)
+
+    @property
+    def resolved_class_names_path(self) -> Path:
+        return resolve_path(self.class_names_path)
+
+    @property
+    def resolved_model_config_path(self) -> Path:
+        return resolve_path(self.model_config_path)
+
+    @property
+    def resolved_preprocessing_config_path(self) -> Path:
+        return resolve_path(self.preprocessing_config_path)
+
+    @property
+    def resolved_class_mapping_path(self) -> Path:
+        return resolve_path(self.class_mapping_path)
 
     @property
     def max_upload_bytes(self) -> int:

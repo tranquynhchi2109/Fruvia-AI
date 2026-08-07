@@ -34,14 +34,6 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         settings.app_version,
     )
 
-    # Initialize FruitClassifier
-    try:
-        classifier = get_fruit_classifier()
-        classifier.load_model()
-        app.state.fruit_classifier = classifier
-    except Exception as e:
-        logger.warning("Failed to initialize FruitClassifier during startup: %s", e)
-
     # Initialize ImageEncoder
     try:
         encoder = get_image_encoder()
@@ -60,6 +52,20 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         app.state.qdrant_repo = qdrant_repo
     except Exception as e:
         logger.warning("Failed to initialize QdrantRepository during startup: %s", e)
+
+    # Initialize FruitClassifier (after encoder & qdrant so kNN fallback can check readiness)
+    try:
+        classifier = get_fruit_classifier()
+        classifier.load_model()
+        app.state.fruit_classifier = classifier
+        if classifier.model_source == "trained_model":
+            logger.info("FruitClassifier ready using trained model artifact.")
+        elif classifier.model_source == "retrieval_knn_fallback":
+            logger.warning("FruitClassifier ready using DINOv2 + Qdrant kNN fallback (No trained model found).")
+        else:
+            logger.error("FruitClassifier is UNAVAILABLE. Classification requests will return HTTP 503.")
+    except Exception as e:
+        logger.error("Failed to initialize FruitClassifier during startup: %s", e, exc_info=True)
 
     yield
 
