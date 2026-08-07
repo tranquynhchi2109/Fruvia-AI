@@ -196,7 +196,7 @@ class TestKNNFallbackEngine:
             assert len(predictions) == 2
             top_class, top_prob = predictions[0]
             assert top_class == "apple"
-            assert top_prob > 0.90  # Apple has dominant weight (0.50 + 0.45 = 0.95 vs Banana 0.05)
+            assert top_prob > 0.70  # Apple has dominant hybrid score
 
 
 class TestClassificationServiceAndMetadata:

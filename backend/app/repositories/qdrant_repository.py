@@ -130,6 +130,30 @@ class QdrantRepository:
             logger.warning("Single Qdrant health check failed: %s", e)
             return False, False
 
+    def get_class_distribution(self, limit: int = 10000) -> dict[str, int]:
+        """
+        Scroll collection points to compute vector counts per canonical_class.
+
+        Returns dict mapping canonical_class -> count.
+        """
+        try:
+            scroll_res, _ = self.client.scroll(
+                collection_name=self.collection_name,
+                limit=limit,
+                with_payload=True,
+                with_vectors=False,
+            )
+            counts: dict[str, int] = {}
+            for point in scroll_res:
+                payload = getattr(point, "payload", {}) or {}
+                original_cls = str(payload.get("original_class", "unknown"))
+                canonical_cls, _ = resolve_class_names(original_cls, self.class_mapping)
+                counts[canonical_cls] = counts.get(canonical_cls, 0) + 1
+            return dict(sorted(counts.items(), key=lambda x: x[1], reverse=True))
+        except Exception as e:
+            logger.warning("Failed to fetch class distribution from Qdrant: %s", e)
+            return {}
+
     def query_similar(self, vector: list[float], top_k: int = 5) -> list[RetrievalResult]:
         """
         Execute vector similarity search in Qdrant Cloud.

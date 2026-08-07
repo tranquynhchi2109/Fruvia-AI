@@ -46,10 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const health = await ApiClient.getHealth();
       if (health.status === "ok") {
         backendStatusBadge.setAttribute("data-status", "online");
-        statusText.textContent = "Backend Trực tuyến";
-      } else {
+        statusText.textContent = "Backend Trực tuyến (Trained Model)";
+      } else if (health.status === "degraded") {
         backendStatusBadge.setAttribute("data-status", "degraded");
-        statusText.textContent = "Backend Giảm chất lượng";
+        const method = health.classification ? health.classification.inference_method : "kNN Fallback";
+        statusText.textContent = `Backend Giảm chất lượng (${method})`;
+      } else {
+        backendStatusBadge.setAttribute("data-status", "offline");
+        statusText.textContent = "Backend Ngoại tuyến";
       }
     } catch (err) {
       backendStatusBadge.setAttribute("data-status", "offline");
@@ -272,23 +276,33 @@ document.addEventListener("DOMContentLoaded", () => {
     const top = response.prediction || { class_name: "unknown", confidence: 0 };
     const predictions = response.top_predictions || [];
     const isAccepted = response.accepted;
+    const isFallback = response.is_fallback;
+    const scoreType = response.score_type || "softmax_probability";
+    const method = response.inference_method || "convnext_tiny";
 
     if (queryDataUrl) {
       resultQueryImg.src = queryDataUrl;
     }
 
     topClassName.textContent = top.class_name;
-    const topPct = (top.confidence * 100).toFixed(1);
-    topConfidenceValue.textContent = `${topPct}%`;
-    topConfidenceFill.style.width = `${topPct}%`;
+    const scoreVal = top.confidence;
+    const topPct = (scoreVal * 100).toFixed(1);
+
+    if (scoreType === "knn_vote") {
+      topConfidenceValue.textContent = `Score: ${scoreVal.toFixed(2)}`;
+      topConfidenceFill.style.width = `${Math.min(scoreVal * 100, 100)}%`;
+    } else {
+      topConfidenceValue.textContent = `${topPct}%`;
+      topConfidenceFill.style.width = `${topPct}%`;
+    }
 
     if (isAccepted) {
-      acceptedBadge.textContent = "Accepted";
+      acceptedBadge.textContent = isFallback ? "Accepted (kNN Match)" : "Accepted";
       acceptedBadge.style.backgroundColor = "#f0fdf4";
       acceptedBadge.style.color = "#16a34a";
       acceptedBadge.style.borderColor = "#bbf7d0";
     } else {
-      acceptedBadge.textContent = "Low Confidence";
+      acceptedBadge.textContent = isFallback ? "Low kNN Confidence" : "Low Confidence";
       acceptedBadge.style.backgroundColor = "#fef2f2";
       acceptedBadge.style.color = "#dc2626";
       acceptedBadge.style.borderColor = "#fecaca";
@@ -325,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
       score.style.fontWeight = "700";
       score.style.fontFamily = "var(--font-mono)";
       score.style.fontSize = "0.875rem";
-      score.textContent = `${(item.confidence * 100).toFixed(1)}%`;
+      score.textContent = scoreType === "knn_vote" ? item.confidence.toFixed(2) : `${(item.confidence * 100).toFixed(1)}%`;
 
       row.appendChild(rank);
       row.appendChild(name);
@@ -333,7 +347,16 @@ document.addEventListener("DOMContentLoaded", () => {
       predictionsList.appendChild(row);
     });
 
-    metaTimingInfo.textContent = `Inference completed in ${response.processing_time_ms} ms (Threshold: ${(response.threshold * 100).toFixed(0)}%)`;
+    let extraInfo = `Engine: ${method}`;
+    if (isFallback) {
+      if (response.neighbor_agreement) {
+        extraInfo += ` | Agreement: ${response.neighbor_agreement}`;
+      }
+      if (response.top_similarity) {
+        extraInfo += ` | Top Sim: ${response.top_similarity.toFixed(2)}`;
+      }
+    }
+    metaTimingInfo.textContent = `Inference: ${response.processing_time_ms} ms | ${extraInfo}`;
     predictionsListContainer.style.display = "block";
   }
 });

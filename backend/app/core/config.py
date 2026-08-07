@@ -73,7 +73,21 @@ class Settings(BaseSettings):
 
     # --- Classification Behavior ---
     classification_threshold: float = Field(
-        default=0.65, ge=0.0, le=1.0, description="Minimum confidence to accept a prediction"
+        default=0.65, ge=0.0, le=1.0, description="Minimum confidence to accept a prediction (Neural Net Softmax)"
+    )
+
+    # --- kNN Fallback Settings ---
+    knn_min_top_similarity: float = Field(
+        default=0.45, ge=0.0, le=1.0, description="Minimum similarity required for top neighbor hit"
+    )
+    knn_min_margin: float = Field(
+        default=0.08, ge=0.0, le=1.0, description="Minimum margin between top-1 and top-2 class scores"
+    )
+    knn_min_support: int = Field(
+        default=3, ge=1, le=20, description="Minimum neighbor support count out of 20"
+    )
+    knn_top_k: int = Field(
+        default=20, ge=1, le=50, description="Number of nearest neighbors to query for kNN voting"
     )
 
     # --- Qdrant ---

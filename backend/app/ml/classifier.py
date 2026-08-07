@@ -72,7 +72,7 @@ class FruitClassifier:
 
     Hierarchical classification engine:
     1. Primary: Trained PyTorch classifier (TorchScript, StateDict, Full Model)
-    2. Fallback: DINOv2 + Qdrant 20-kNN similarity-weighted voting
+    2. Fallback: DINOv2 + Qdrant 20-kNN hybrid scoring (Top-1 sim, Mean sim, Support ratio)
     3. Unavailable: Raises HTTP 503 error if neither engine is available.
 
     NO random weights fallback is ever used.
@@ -150,7 +150,6 @@ class FruitClassifier:
                     model_path,
                     traceback.format_exc(),
                 )
-                # Fail explicitly rather than falling back silently to random weights
                 self.model = None
                 self.is_loaded = False
                 self.artifact_type = "corrupt"
@@ -172,7 +171,6 @@ class FruitClassifier:
 
     def _load_canonical_class_names(self) -> list[str]:
         """Load and validate target class list against canonical configs/classes.yaml."""
-        # 1. Try class_names.json first if exists
         class_names_path = self.settings.resolved_class_names_path
         json_classes: list[str] | None = None
         if class_names_path.exists():
@@ -186,7 +184,6 @@ class FruitClassifier:
             except Exception as e:
                 logger.warning("Could not load class names from '%s': %s", class_names_path, e)
 
-        # 2. Canonical source of truth: configs/classes.yaml
         yaml_path = self.settings.resolved_class_mapping_path.parent / "classes.yaml"
         if not yaml_path.exists():
             yaml_path = Path(__file__).resolve().parents[3] / "configs" / "classes.yaml"
@@ -207,30 +204,16 @@ class FruitClassifier:
                 "pomegranate", "strawberry", "tomato", "watermelon"
             ]
 
-        # 3. Validate class metadata consistency if JSON classes were found
-        if json_classes is not None:
-            if len(json_classes) != len(canonical_classes):
-                logger.warning(
-                    "Class count mismatch: JSON (%d) vs Canonical (%d). Using canonical.",
-                    len(json_classes),
-                    len(canonical_classes),
-                )
-            elif json_classes != canonical_classes:
-                logger.warning("Class order mismatch between JSON and canonical classes.yaml. Enforcing canonical order.")
+        if json_classes is not None and json_classes != canonical_classes:
+            logger.warning("Class list mismatch between JSON and canonical classes.yaml. Enforcing canonical order.")
 
         return canonical_classes
 
     def _load_trained_artifact(self, model_path: Path) -> None:
-        """
-        Flexibly load a PyTorch model artifact supporting multiple formats:
-        1. TorchScript (.pt / .pth)
-        2. Full nn.Module object
-        3. Checkpoint dict containing 'state_dict' or 'model_state_dict'
-        4. Raw state_dict
-        """
+        """Flexibly load a PyTorch model artifact supporting multiple formats."""
         num_classes = len(self.class_names)
 
-        # Strategy 1: Attempt TorchScript load
+        # Strategy 1: TorchScript
         try:
             model = torch.jit.load(str(model_path), map_location=self.device)
             self._validate_model(model, num_classes)
@@ -240,10 +223,9 @@ class FruitClassifier:
         except Exception:
             logger.debug("Artifact is not a TorchScript model. Trying PyTorch weight loaders...")
 
-        # Strategy 2: Attempt standard PyTorch load
+        # Strategy 2: PyTorch load
         loaded_obj = torch.load(str(model_path), map_location=self.device)
 
-        # Strategy 2A: Full nn.Module
         if isinstance(loaded_obj, nn.Module):
             model = loaded_obj
             self._validate_model(model, num_classes)
@@ -251,7 +233,6 @@ class FruitClassifier:
             self.artifact_type = "full_module"
             return
 
-        # Extract state dict if inside a dictionary checkpoint
         state_dict: dict[str, Any] | None = None
         if isinstance(loaded_obj, dict):
             if "state_dict" in loaded_obj:
@@ -261,7 +242,6 @@ class FruitClassifier:
                 state_dict = loaded_obj["model_state_dict"]
                 self.artifact_type = "checkpoint_dict"
             else:
-                # Could be a raw state_dict represented as a dict
                 state_dict = loaded_obj
                 self.artifact_type = "state_dict"
 
@@ -303,8 +283,6 @@ class FruitClassifier:
 
             encoder = get_image_encoder()
             qdrant = get_qdrant_repository()
-
-            # Encoder model loading can be lazy, but Qdrant connectivity is required
             qdrant_ok, collection_ok = qdrant.get_health_status()
             return qdrant_ok and collection_ok
         except Exception as e:
@@ -361,12 +339,6 @@ class FruitClassifier:
     def predict(self, image: Image.Image, top_k: int = 3) -> dict[str, Any]:
         """
         Run fruit classification inference.
-
-        Delegates to:
-        - Trained PyTorch model if loaded
-        - DINOv2 + Qdrant kNN fallback if trained model is missing
-        - Throws ModelNotLoadedError if neither engine is available.
-
         Returns structured dictionary containing predictions and engine metadata.
         """
         if not self.is_loaded or self.model_source == "unavailable":
@@ -406,10 +378,13 @@ class FruitClassifier:
 
             return {
                 "predictions": predictions,
+                "score_type": "softmax_probability",
                 "inference_method": self.architecture,
                 "model_name": self.architecture,
                 "model_source": "trained_artifact",
                 "is_fallback": False,
+                "neighbor_agreement": None,
+                "top_similarity": None,
             }
         except Exception as e:
             logger.error("Error during trained model inference: %s", e, exc_info=True)
@@ -417,14 +392,12 @@ class FruitClassifier:
 
     def _predict_via_knn(self, image: Image.Image, top_k: int) -> dict[str, Any]:
         """
-        Inference via DINOv2 + Qdrant 20-kNN similarity-weighted voting.
+        Inference via DINOv2 + Qdrant 20-kNN Hybrid Decision Strategy.
 
-        1. Extract L2-normalized 768-dim embedding via DINOv2.
-        2. Query Qdrant top-20 nearest neighbors.
-        3. Filter neighbors below similarity_floor = 0.35.
-        4. Compute similarity-weighted votes per canonical_class:
-             weight(c) = sum(max(similarity - floor, 0))
-        5. Normalize votes to get top-K probabilities.
+        Scores each candidate class by combining:
+        - 50% Top-1 Similarity: max(sim) for class
+        - 30% Mean Similarity: avg(sim) for class
+        - 20% Support Ratio: support_count / 20
         """
         try:
             from app.ml.image_encoder import get_image_encoder
@@ -433,62 +406,95 @@ class FruitClassifier:
             encoder = get_image_encoder()
             qdrant = get_qdrant_repository()
 
-            # Ensure encoder is loaded
             if not encoder.is_loaded:
                 encoder.load_model()
 
-            # 1. Encode image
             embedding = encoder.encode_image(image)
-
-            # 2. Query Qdrant top 20 nearest neighbors
-            search_k = max(top_k * 4, 20)
+            search_k = self.settings.knn_top_k
             hits = qdrant.query_similar(embedding, top_k=search_k)
 
             if not hits:
                 logger.warning("kNN classification returned 0 neighbors from Qdrant.")
                 return {
                     "predictions": [(self.class_names[0], 0.0)],
+                    "score_type": "knn_vote",
                     "inference_method": "dinov2_qdrant_knn",
                     "model_name": "dinov2_base_qdrant_knn",
                     "model_source": "retrieval_knn_fallback",
                     "is_fallback": True,
+                    "neighbor_agreement": "0/20",
+                    "top_similarity": 0.0,
+                    "winning_support": 0,
+                    "winning_top_sim": 0.0,
+                    "winning_margin": 0.0,
                 }
 
-            # 3. Compute weighted votes per canonical class
-            similarity_floor = 0.35
-            class_weights: dict[str, float] = {}
+            top_1_hit_sim = round(hits[0].similarity, 4)
 
+            # Group hits by canonical class
+            class_sims: dict[str, list[float]] = {}
             for hit in hits:
                 cls = hit.canonical_class
                 sim = hit.similarity
-                if sim > similarity_floor:
-                    weight = sim - similarity_floor
-                    class_weights[cls] = class_weights.get(cls, 0.0) + weight
+                if sim >= 0.25:  # Filter out negative or extreme low noise
+                    class_sims.setdefault(cls, []).append(sim)
 
-            total_weight = sum(class_weights.values())
+            if not class_sims:
+                # If all hits are below 0.25
+                first_cls = hits[0].canonical_class
+                class_sims[first_cls] = [hits[0].similarity]
 
-            # If no neighbor met the similarity floor, fallback to unweighted top hits
-            if total_weight <= 0:
-                for hit in hits[:top_k]:
-                    cls = hit.canonical_class
-                    class_weights[cls] = class_weights.get(cls, 0.0) + max(hit.similarity, 0.01)
-                total_weight = sum(class_weights.values())
+            # Compute Hybrid Score per class
+            class_scores: dict[str, dict[str, float]] = {}
+            total_k = float(len(hits))
 
-            # 4. Normalize weights to probabilities
-            sorted_classes = sorted(class_weights.items(), key=lambda x: x[1], reverse=True)
+            for cls, sims in class_sims.items():
+                top1_sim = max(sims)
+                mean_sim = sum(sims) / len(sims)
+                support_ratio = len(sims) / total_k
+
+                # Hybrid Formula
+                hybrid_score = (0.50 * top1_sim) + (0.30 * mean_sim) + (0.20 * support_ratio)
+
+                class_scores[cls] = {
+                    "score": round(hybrid_score, 4),
+                    "top1_sim": round(top1_sim, 4),
+                    "mean_sim": round(mean_sim, 4),
+                    "support": len(sims),
+                }
+
+            # Sort classes by hybrid_score descending
+            sorted_classes = sorted(
+                class_scores.items(), key=lambda x: x[1]["score"], reverse=True
+            )
+
+            winning_cls, winning_meta = sorted_classes[0]
+            winning_support = winning_meta["support"]
+            winning_top_sim = winning_meta["top1_sim"]
+
+            runner_up_score = sorted_classes[1][1]["score"] if len(sorted_classes) > 1 else 0.0
+            winning_margin = round(winning_meta["score"] - runner_up_score, 4)
 
             predictions: list[tuple[str, float]] = []
-            for cls, weight in sorted_classes[:top_k]:
-                prob = weight / total_weight if total_weight > 0 else 0.0
-                predictions.append((cls, round(float(prob), 4)))
+            for cls, meta in sorted_classes[:top_k]:
+                predictions.append((cls, meta["score"]))
+
+            agreement_str = f"{winning_support}/{len(hits)}"
 
             return {
                 "predictions": predictions,
+                "score_type": "knn_vote",
                 "inference_method": "dinov2_qdrant_knn",
                 "model_name": "dinov2_base_qdrant_knn",
                 "model_source": "retrieval_knn_fallback",
                 "is_fallback": True,
+                "neighbor_agreement": agreement_str,
+                "top_similarity": top_1_hit_sim,
+                "winning_support": winning_support,
+                "winning_top_sim": winning_top_sim,
+                "winning_margin": winning_margin,
             }
+
         except Exception as e:
             logger.error("Error during kNN classification fallback: %s", e, exc_info=True)
             raise PredictionError(
