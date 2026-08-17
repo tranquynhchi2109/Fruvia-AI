@@ -13,7 +13,6 @@ from fastapi.testclient import TestClient
 
 from app.api import routes_health
 from app.main import app
-from app.ml.classifier import get_fruit_classifier
 from app.ml.image_encoder import get_image_encoder
 from app.repositories.qdrant_repository import get_qdrant_repository
 
@@ -47,36 +46,18 @@ class TestHealthEndpoint:
         assert "model_loaded" in data
         assert "qdrant_connected" in data
         assert "collection_available" in data
-        assert "classification" in data
         assert "version" in data
+        assert "classification" not in data
 
     def test_health_status_ok_when_fully_healthy(self) -> None:
-        """When encoder, Qdrant, and classifier are ready, health status should be 'ok'."""
+        """When encoder and Qdrant are ready, health status should be 'ok'."""
         mock_encoder = MagicMock()
         mock_encoder.is_loaded = True
         mock_repo = MagicMock()
         mock_repo.get_health_status.return_value = (True, True)
 
-        mock_classifier = MagicMock()
-        mock_classifier.is_loaded = True
-        mock_classifier.model_source = "trained_model"
-        mock_classifier.is_fallback = False
-        mock_classifier.get_audit_info.return_value = {
-            "architecture": "convnext_tiny",
-            "artifact_path": "models/classifier/model.pth",
-            "artifact_exists": True,
-            "artifact_type": "state_dict",
-            "classes_count": 18,
-            "preprocessing_source": "ImageNet defaults",
-            "device": "cpu",
-            "model_source": "trained_model",
-            "ready": True,
-            "is_fallback": False,
-        }
-
         app.dependency_overrides[get_image_encoder] = lambda: mock_encoder
         app.dependency_overrides[get_qdrant_repository] = lambda: mock_repo
-        app.dependency_overrides[get_fruit_classifier] = lambda: mock_classifier
 
         client = TestClient(app)
         resp = client.get("/api/health")
@@ -87,7 +68,6 @@ class TestHealthEndpoint:
         assert data["model_loaded"] is True
         assert data["qdrant_connected"] is True
         assert data["collection_available"] is True
-        assert data["classification"]["status"] == "ready"
 
         app.dependency_overrides.clear()
 
@@ -98,13 +78,8 @@ class TestHealthEndpoint:
         mock_repo = MagicMock()
         mock_repo.get_health_status.return_value = (True, True)
 
-        mock_classifier = MagicMock()
-        mock_classifier.is_loaded = True
-        mock_classifier.model_source = "trained_model"
-
         app.dependency_overrides[get_image_encoder] = lambda: mock_encoder
         app.dependency_overrides[get_qdrant_repository] = lambda: mock_repo
-        app.dependency_overrides[get_fruit_classifier] = lambda: mock_classifier
 
         client = TestClient(app)
         resp = client.get("/api/ready")
@@ -120,13 +95,8 @@ class TestHealthEndpoint:
         mock_repo = MagicMock()
         mock_repo.get_health_status.return_value = (False, False)
 
-        mock_classifier = MagicMock()
-        mock_classifier.is_loaded = False
-        mock_classifier.model_source = "unavailable"
-
         app.dependency_overrides[get_image_encoder] = lambda: mock_encoder
         app.dependency_overrides[get_qdrant_repository] = lambda: mock_repo
-        app.dependency_overrides[get_fruit_classifier] = lambda: mock_classifier
 
         client = TestClient(app)
         resp = client.get("/api/ready")

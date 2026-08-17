@@ -21,16 +21,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 def resolve_path(path: str | Path) -> Path:
     """
     Resolve path relative to PROJECT_ROOT if it is a relative path or if the
-    absolute path does not exist on the current system (e.g. Docker container paths
-    like /app/models/... when running on Windows).
+    absolute path does not exist on the current system.
     """
     p = Path(path)
     if p.is_absolute():
         if p.exists():
             return p
-        # If absolute path doesn't exist (e.g. /app/models/...), resolve relative to PROJECT_ROOT
         relative_parts = p.parts[1:] if p.parts[0] in ("/", "\\") else p.parts
-        # Strip leading container directory if present
         if relative_parts and relative_parts[0] == "app":
             relative_parts = relative_parts[1:]
         candidate = PROJECT_ROOT.joinpath(*relative_parts)
@@ -65,31 +62,6 @@ class Settings(BaseSettings):
         default=None, description="Optional custom directory for Hugging Face cache"
     )
 
-    # --- Classification Model ---
-    model_path: Path = Field(default=Path("models/classifier/model.pth"))
-    class_names_path: Path = Field(default=Path("models/classifier/class_names.json"))
-    model_config_path: Path = Field(default=Path("models/classifier/model_config.json"))
-    preprocessing_config_path: Path = Field(default=Path("models/classifier/preprocessing.json"))
-
-    # --- Classification Behavior ---
-    classification_threshold: float = Field(
-        default=0.65, ge=0.0, le=1.0, description="Minimum confidence to accept a prediction (Neural Net Softmax)"
-    )
-
-    # --- kNN Fallback Settings ---
-    knn_min_top_similarity: float = Field(
-        default=0.45, ge=0.0, le=1.0, description="Minimum similarity required for top neighbor hit"
-    )
-    knn_min_margin: float = Field(
-        default=0.08, ge=0.0, le=1.0, description="Minimum margin between top-1 and top-2 class scores"
-    )
-    knn_min_support: int = Field(
-        default=3, ge=1, le=20, description="Minimum neighbor support count out of 20"
-    )
-    knn_top_k: int = Field(
-        default=20, ge=1, le=50, description="Number of nearest neighbors to query for kNN voting"
-    )
-
     # --- Qdrant ---
     qdrant_url: str | None = Field(default=None, description="Qdrant Cloud endpoint URL")
     qdrant_api_key: str | None = Field(default=None, description="Qdrant Cloud API key")
@@ -115,22 +87,6 @@ class Settings(BaseSettings):
     log_level: str = Field(default="INFO")
 
     # --- Derived properties ---
-
-    @property
-    def resolved_model_path(self) -> Path:
-        return resolve_path(self.model_path)
-
-    @property
-    def resolved_class_names_path(self) -> Path:
-        return resolve_path(self.class_names_path)
-
-    @property
-    def resolved_model_config_path(self) -> Path:
-        return resolve_path(self.model_config_path)
-
-    @property
-    def resolved_preprocessing_config_path(self) -> Path:
-        return resolve_path(self.preprocessing_config_path)
 
     @property
     def resolved_class_mapping_path(self) -> Path:
@@ -169,14 +125,3 @@ def get_settings() -> Settings:
     environment is read only once.
     """
     return Settings()
-
-
-def load_class_names(path: Path) -> list[str]:
-    """Load the ordered list of class names from a JSON file."""
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-    if isinstance(data, list):
-        return data
-    if isinstance(data, dict) and "classes" in data:
-        return data["classes"]
-    raise ValueError(f"Unexpected class_names format in {path}")

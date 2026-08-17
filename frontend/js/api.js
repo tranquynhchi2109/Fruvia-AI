@@ -70,49 +70,5 @@ const ApiClient = {
       }
       throw error;
     }
-  },
-
-  /**
-   * Submit image for fruit classification
-   * @param {File} file
-   * @param {number} topK
-   * @returns {Promise<{prediction: {class_name: string, confidence: number}, top_predictions: Array<{class_name: string, confidence: number}>, accepted: boolean, threshold: number, message: string, processing_time_ms: number}>}
-   */
-  async classifyImage(file, topK = 3) {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), CONFIG.API_TIMEOUT_MS);
-
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("top_k", String(topK));
-
-    try {
-      const response = await fetch(`${CONFIG.API_BASE_URL}/api/classify`, {
-        method: "POST",
-        body: formData,
-        signal: controller.signal
-      });
-      clearTimeout(timeoutId);
-
-      const data = await response.json().catch(() => null);
-
-      if (!response.ok) {
-        const error = new Error(data?.message || `HTTP error ${response.status}`);
-        error.status = response.status;
-        error.errorCode = data?.error_code || "UNKNOWN_ERROR";
-        error.detail = data?.detail;
-        throw error;
-      }
-
-      return data;
-    } catch (error) {
-      clearTimeout(timeoutId);
-      if (error.name === "AbortError") {
-        const timeoutError = new Error("The request timed out. Please try again.");
-        timeoutError.errorCode = "TIMEOUT";
-        throw timeoutError;
-      }
-      throw error;
-    }
   }
 };

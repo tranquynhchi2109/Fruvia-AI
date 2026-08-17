@@ -18,9 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchText = document.getElementById("search-text");
   const searchSpinner = document.getElementById("search-spinner");
 
-  const backendStatusBadge = document.getElementById("backend-status");
-  const statusText = document.getElementById("status-text");
-
   const comparisonContainer = document.getElementById("comparison-container");
   const queryComparisonImg = document.getElementById("query-comparison-img");
   const topMatchMedia = document.getElementById("top-match-media");
@@ -48,27 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let selectedFile = null;
   let queryDataUrl = null;
   let isSearching = false;
-
-  // ---------- Health Check Polling ----------
-  async function checkBackendHealth() {
-    try {
-      const health = await ApiClient.getHealth();
-      if (health.status === "ok") {
-        backendStatusBadge.setAttribute("data-status", "online");
-        statusText.textContent = "Backend Trực tuyến";
-      } else {
-        backendStatusBadge.setAttribute("data-status", "degraded");
-        statusText.textContent = "Backend Giảm chất lượng";
-      }
-    } catch (err) {
-      backendStatusBadge.setAttribute("data-status", "offline");
-      statusText.textContent = "Backend Ngoại tuyến";
-    }
-  }
-
-  // Initial check & interval polling (30s)
-  checkBackendHealth();
-  setInterval(checkBackendHealth, CONFIG.HEALTH_CHECK_INTERVAL_MS);
 
   // ---------- File Selection & Drag-and-Drop & Paste ----------
   function handleFileSelected(file) {

@@ -4,14 +4,12 @@ Unit tests for configuration loading and validation.
 
 from __future__ import annotations
 
-import json
 import os
-from pathlib import Path
 from unittest.mock import patch
 
 import pytest
 
-from app.core.config import Settings, load_class_names
+from app.core.config import Settings
 
 pytestmark = pytest.mark.unit
 
@@ -25,7 +23,6 @@ class TestSettings:
             s = Settings(_env_file=None)
         assert s.app_env == "development"
         assert s.app_port == 8000
-        assert s.classification_threshold == 0.65
         assert s.max_upload_mb == 10
         assert s.qdrant_collection == "fruvia_fruits360_original_dinov2_base_v1"
         assert s.log_level == "INFO"
@@ -65,40 +62,3 @@ class TestSettings:
             pytest.raises(ValueError, match="log_level must be one of"),
         ):
             Settings()
-
-    def test_classification_threshold_bounds(self) -> None:
-        with (
-            patch.dict(os.environ, {"CLASSIFICATION_THRESHOLD": "1.5"}, clear=True),
-            pytest.raises(ValueError),
-        ):
-            Settings()
-
-    def test_threshold_from_env(self) -> None:
-        with patch.dict(os.environ, {"CLASSIFICATION_THRESHOLD": "0.8"}, clear=True):
-            s = Settings()
-        assert s.classification_threshold == 0.8
-
-
-class TestLoadClassNames:
-    """Tests for load_class_names helper."""
-
-    def test_load_list_format(self, tmp_dir: Path) -> None:
-        path = tmp_dir / "classes.json"
-        with open(path, "w") as f:
-            json.dump(["apple", "banana", "mango"], f)
-        result = load_class_names(path)
-        assert result == ["apple", "banana", "mango"]
-
-    def test_load_dict_format(self, tmp_dir: Path) -> None:
-        path = tmp_dir / "classes.json"
-        with open(path, "w") as f:
-            json.dump({"classes": ["orange", "pear"]}, f)
-        result = load_class_names(path)
-        assert result == ["orange", "pear"]
-
-    def test_invalid_format_raises(self, tmp_dir: Path) -> None:
-        path = tmp_dir / "classes.json"
-        with open(path, "w") as f:
-            json.dump({"items": ["x"]}, f)
-        with pytest.raises(ValueError, match="Unexpected class_names format"):
-            load_class_names(path)

@@ -10,7 +10,6 @@ from app.core.exceptions import (
     FileTooLargeError,
     FruviaError,
     ImageValidationError,
-    LowConfidenceError,
     ModelNotLoadedError,
     QdrantConnectionError,
     UnsupportedFormatError,
@@ -30,7 +29,6 @@ class TestExceptionHierarchy:
             (UnsupportedFormatError, "UNSUPPORTED_FORMAT", 415),
             (ModelNotLoadedError, "MODEL_NOT_LOADED", 503),
             (QdrantConnectionError, "QDRANT_UNAVAILABLE", 503),
-            (LowConfidenceError, "LOW_CONFIDENCE", 200),
         ],
     )
     def test_error_attributes(self, exc_class: type, code: str, status: int) -> None:

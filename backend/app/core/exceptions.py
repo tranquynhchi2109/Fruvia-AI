@@ -2,7 +2,7 @@
 Fruvia AI exception hierarchy and FastAPI error handlers.
 
 All user-facing errors extend FruviaError so a single handler
-can catch them and return a consistent JSON body.  Internal
+can catch them and return a consistent JSON body. Internal
 details are logged but never leaked to the client.
 """
 
@@ -85,15 +85,7 @@ class ModelNotLoadedError(FruviaError):
 
     status_code = 503
     error_code = "MODEL_NOT_LOADED"
-    message = "The classification model is not loaded. Please try again later."
-
-
-class ModelLoadError(FruviaError):
-    """Raised when loading a model artifact fails."""
-
-    status_code = 500
-    error_code = "MODEL_LOAD_FAILED"
-    message = "Failed to load model weights artifact."
+    message = "The image encoder model is not loaded. Please try again later."
 
 
 class ImageEncodingError(FruviaError):
@@ -118,22 +110,6 @@ class QdrantCollectionNotFoundError(FruviaError):
     status_code = 503
     error_code = "COLLECTION_NOT_FOUND"
     message = "The search collection is not available. Please try again later."
-
-
-class LowConfidenceError(FruviaError):
-    """Not really an error — used to signal low-confidence results."""
-
-    status_code = 200  # still 200, but accepted=False in body
-    error_code = "LOW_CONFIDENCE"
-    message = "The model confidence is below the acceptance threshold."
-
-
-class PredictionError(FruviaError):
-    """Raised when model inference fails."""
-
-    status_code = 500
-    error_code = "PREDICTION_FAILED"
-    message = "Failed to classify the image."
 
 
 # ================================================================

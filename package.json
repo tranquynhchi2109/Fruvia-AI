@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "9router": "^0.5.50"
+    "9router": "^0.5.50",
+    "claude": "^0.1.1"
   }
 }

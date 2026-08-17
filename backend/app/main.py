@@ -16,7 +16,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import get_settings
 from app.core.exceptions import FruviaError, fruvia_error_handler, generic_error_handler
 from app.core.logging import get_logger, setup_logging
-from app.ml.classifier import get_fruit_classifier
 from app.ml.image_encoder import get_image_encoder
 from app.repositories.qdrant_repository import get_qdrant_repository
 
@@ -53,20 +52,6 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     except Exception as e:
         logger.warning("Failed to initialize QdrantRepository during startup: %s", e)
 
-    # Initialize FruitClassifier (after encoder & qdrant so kNN fallback can check readiness)
-    try:
-        classifier = get_fruit_classifier()
-        classifier.load_model()
-        app.state.fruit_classifier = classifier
-        if classifier.model_source == "trained_model":
-            logger.info("FruitClassifier ready using trained model artifact.")
-        elif classifier.model_source == "retrieval_knn_fallback":
-            logger.warning("FruitClassifier ready using DINOv2 + Qdrant kNN fallback (No trained model found).")
-        else:
-            logger.error("FruitClassifier is UNAVAILABLE. Classification requests will return HTTP 503.")
-    except Exception as e:
-        logger.error("Failed to initialize FruitClassifier during startup: %s", e, exc_info=True)
-
     yield
 
     logger.info("Fruvia AI shutting down.")
@@ -78,7 +63,7 @@ def create_app() -> FastAPI:
 
     app = FastAPI(
         title="Fruvia AI",
-        description="AI-powered fruit recognition and image retrieval",
+        description="AI-powered fruit image similarity retrieval system using DINOv2 embeddings and Qdrant vector search",
         version=settings.app_version,
         docs_url="/docs" if not settings.is_production else None,
         redoc_url="/redoc" if not settings.is_production else None,
@@ -102,13 +87,11 @@ def create_app() -> FastAPI:
     app.add_exception_handler(Exception, generic_error_handler)  # type: ignore[arg-type]
 
     # --- Routes ---
-    from app.api.routes_classification import router as classification_router
     from app.api.routes_health import router as health_router
     from app.api.routes_retrieval import router as retrieval_router
 
     app.include_router(health_router, prefix="/api")
     app.include_router(retrieval_router, prefix="/api")
-    app.include_router(classification_router, prefix="/api")
 
     return app
 
