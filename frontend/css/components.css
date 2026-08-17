@@ -2,6 +2,16 @@
    Fruvia AI — Reusable Components
    ============================================================ */
 
+/* ---------- SVG Icon Helper ---------- */
+.svg-icon {
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 /* ---------- Header & Navigation ---------- */
 .site-header {
   background-color: var(--color-bg-surface);
@@ -30,7 +40,10 @@
 }
 
 .brand-logo .logo-icon {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
 }
 
 .brand-logo .brand-badge {
@@ -140,6 +153,9 @@
 }
 
 .alert-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.25rem;
   flex-shrink: 0;
 }

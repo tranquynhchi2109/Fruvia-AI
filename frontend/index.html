@@ -27,7 +27,7 @@
   <meta property="twitter:description" content="Khám phá và tìm kiếm hình ảnh trái cây tương đồng bằng công nghệ DINOv2 Vector Search thế hệ mới.">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍇</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23059669'><path d='M12 2L9.5 7.5L4 8.5L8 12.5L7 18L12 15.25L17 18L16 12.5L20 8.5L14.5 7.5L12 2Z'/></svg>">
   <link rel="canonical" href="https://fruvia-ai.org/">
 
   <!-- Stylesheets -->
@@ -62,14 +62,23 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand-logo" aria-label="Trang chủ Fruvia AI">
-        <span class="logo-icon" aria-hidden="true">🍇</span>
+        <span class="logo-icon" aria-hidden="true">
+          <svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+          </svg>
+        </span>
         <span>Fruvia AI</span>
         <span class="brand-badge">Enterprise v1.0</span>
       </a>
       <nav class="header-action" aria-label="Điều hướng chính">
         <a href="#features" class="btn btn-secondary btn-sm">Tính năng</a>
         <a href="#architecture" class="btn btn-secondary btn-sm">Công nghệ</a>
-        <a href="retrieval.html" class="btn btn-primary btn-sm">Trải nghiệm Demo →</a>
+        <a href="retrieval.html" class="btn btn-primary btn-sm">
+          <span>Trải nghiệm Demo</span>
+          <svg class="svg-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </nav>
     </div>
   </header>
@@ -91,10 +100,16 @@
         </p>
         <div class="hero-ctas">
           <a href="retrieval.html" class="btn btn-primary">
-            🚀 Bắt đầu Tìm kiếm Ảnh
+            <svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <span>Bắt đầu Tìm kiếm Ảnh</span>
           </a>
           <a href="#architecture" class="btn btn-secondary">
-            📖 Khám phá Kiến trúc API
+            <svg class="svg-icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+            <span>Khám phá Kiến trúc API</span>
           </a>
         </div>
 
@@ -131,19 +146,31 @@
 
         <div class="features-grid">
           <article class="feature-card-modern">
-            <div class="feature-icon-wrapper" aria-hidden="true">🧠</div>
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.2 19.58 10.55 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+              </svg>
+            </div>
             <h3>Self-Supervised DINOv2</h3>
             <p>Trích xuất đặc trưng hình ảnh bằng mô hình Foundation Vision Transformer thế hệ mới từ Meta AI, không phụ thuộc vào nhãn thủ công và bền vững với điều kiện ánh sáng.</p>
           </article>
 
           <article class="feature-card-modern">
-            <div class="feature-icon-wrapper" aria-hidden="true">⚡</div>
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+              </svg>
+            </div>
             <h3>Qdrant Cloud Vector Search</h3>
             <p>Lưu trữ và truy vấn không gian vector 768 chiều với index HNSW tối ưu, mang lại kết quả Cosine Similarity trong khoảng thời gian miligiây.</p>
           </article>
 
           <article class="feature-card-modern">
-            <div class="feature-icon-wrapper" aria-hidden="true">🔒</div>
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+              </svg>
+            </div>
             <h3>Validation & An toàn Dữ liệu</h3>
             <p>Hệ thống tự động kiểm tra kích thước, chống Decompression Bomb, chuẩn hóa RGB và xác thực MIME type trước khi đưa vào mô hình AI.</p>
           </article>
@@ -248,7 +275,11 @@
       <div class="footer-nav-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand-logo" style="margin-bottom: var(--space-xs);">
-            <span class="logo-icon" aria-hidden="true">🍇</span>
+            <span class="logo-icon" aria-hidden="true">
+              <svg class="svg-icon" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+              </svg>
+            </span>
             <span>Fruvia AI</span>
           </a>
           <p>Hệ thống tìm kiếm hình ảnh trái cây tương đồng bằng công nghệ AI Vector Search hàng đầu.</p>
