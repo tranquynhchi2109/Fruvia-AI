@@ -46,21 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   let queryDataUrl = null;
   let isSearching = false;
 
-  // SVG Helper
-  function createSvgIcon(pathD, width = 24, height = 24) {
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("class", "svg-icon");
-    svg.setAttribute("viewBox", "0 0 24 24");
-    svg.setAttribute("width", String(width));
-    svg.setAttribute("height", String(height));
-    svg.setAttribute("fill", "currentColor");
-
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", pathD);
-    svg.appendChild(path);
-    return svg;
-  }
-
   // ---------- File Selection & Drag-and-Drop & Paste ----------
   function handleFileSelected(file) {
     if (!file) return;
@@ -213,11 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.className = "alert-banner alert-banner-error";
     banner.setAttribute("role", "alert");
 
-    const icon = document.createElement("span");
-    icon.className = "alert-icon";
-    icon.setAttribute("aria-hidden", "true");
-    icon.appendChild(createSvgIcon("M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z", 20, 20));
-
     const content = document.createElement("div");
     content.className = "alert-content";
 
@@ -229,7 +209,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     content.appendChild(h4);
     content.appendChild(p);
-    banner.appendChild(icon);
     banner.appendChild(content);
     errorBannerContainer.appendChild(banner);
     errorBannerContainer.style.display = "block";
@@ -241,11 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
     banner.className = "alert-banner alert-banner-warning";
     banner.setAttribute("role", "alert");
 
-    const icon = document.createElement("span");
-    icon.className = "alert-icon";
-    icon.setAttribute("aria-hidden", "true");
-    icon.appendChild(createSvgIcon("M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z", 20, 20));
-
     const content = document.createElement("div");
     content.className = "alert-content";
 
@@ -257,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     content.appendChild(h4);
     content.appendChild(p);
-    banner.appendChild(icon);
     banner.appendChild(content);
     warningBannerContainer.appendChild(banner);
     warningBannerContainer.style.display = "block";
@@ -320,17 +293,12 @@ document.addEventListener("DOMContentLoaded", () => {
       emptyDiv.className = "empty-state";
       emptyDiv.style.gridColumn = "1 / -1";
 
-      const icon = document.createElement("div");
-      icon.className = "empty-state-icon";
-      icon.appendChild(createSvgIcon("M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z", 48, 48));
-
       const h3 = document.createElement("h3");
       h3.textContent = "Không tìm thấy Ảnh Tương đồng";
 
       const p = document.createElement("p");
       p.textContent = "Tìm kiếm vector không trả về kết quả nào cho ảnh truy vấn của bạn.";
 
-      emptyDiv.appendChild(icon);
       emptyDiv.appendChild(h3);
       emptyDiv.appendChild(p);
       resultsGrid.appendChild(emptyDiv);
@@ -357,13 +325,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         const topPlaceholder = document.createElement("div");
         topPlaceholder.className = "card-placeholder";
-        const pIcon = document.createElement("span");
-        pIcon.className = "fruit-icon";
-        pIcon.appendChild(createSvgIcon("M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z", 32, 32));
         const pText = document.createElement("span");
         pText.className = "placeholder-class";
         pText.textContent = displayName;
-        topPlaceholder.appendChild(pIcon);
         topPlaceholder.appendChild(pText);
         topMatchMedia.appendChild(topPlaceholder);
       }
@@ -535,11 +499,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const placeholder = document.createElement("div");
     placeholder.className = "card-placeholder";
 
-    const fruitIcon = document.createElement("span");
-    fruitIcon.className = "fruit-icon";
-    fruitIcon.setAttribute("aria-hidden", "true");
-    fruitIcon.appendChild(createSvgIcon("M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z", 32, 32));
-
     const nameSpan = document.createElement("span");
     nameSpan.className = "placeholder-class";
     nameSpan.textContent = displayName;
@@ -548,7 +507,6 @@ document.addEventListener("DOMContentLoaded", () => {
     noteSpan.className = "placeholder-note";
     noteSpan.textContent = noteText;
 
-    placeholder.appendChild(fruitIcon);
     placeholder.appendChild(nameSpan);
     placeholder.appendChild(noteSpan);
     return placeholder;
