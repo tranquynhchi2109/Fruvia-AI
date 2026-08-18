@@ -145,10 +145,31 @@
           <h2 id="modal-title" class="modal-title"></h2>
           <p id="modal-original-class" class="modal-subtitle"></p>
           <div id="modal-similarity-box" class="modal-similarity"></div>
-          <div class="modal-meta-list">
+
+          <!-- Technical Payload Section -->
+          <div class="modal-meta-list" style="margin-bottom: 1.25rem;">
             <div><strong>Tên file:</strong> <span id="modal-filename"></span></div>
             <div><strong>Tập dữ liệu:</strong> <span id="modal-split"></span></div>
             <div><strong>Đường dẫn:</strong> <span id="modal-path"></span></div>
+          </div>
+
+          <!-- Knowledge Base: Fruit Knowledge Card -->
+          <div id="modal-fruit-knowledge" class="fruit-knowledge-card">
+            <h3 class="knowledge-card-title">Thông tin & Công dụng Sinh học</h3>
+            <div class="knowledge-grid">
+              <div><strong>Tên khoa học:</strong> <span id="kb-sci-name">-</span></div>
+              <div><strong>Họ thực vật:</strong> <span id="kb-family">-</span></div>
+              <div><strong>Calo ước tính:</strong> <span id="kb-calories">-</span></div>
+              <div><strong>Nguồn gốc:</strong> <span id="kb-origin">-</span></div>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <strong>Vitamin & Dưỡng chất:</strong>
+              <p id="kb-vitamins" class="knowledge-desc">-</p>
+            </div>
+            <div style="margin-top: 0.5rem;">
+              <strong>Tác dụng cho sức khỏe:</strong>
+              <p id="kb-benefits" class="knowledge-desc">-</p>
+            </div>
           </div>
         </div>
       </div>
@@ -164,6 +185,7 @@
   <script src="js/config.js"></script>
   <script src="js/api.js"></script>
   <script src="js/utils.js"></script>
+  <script src="js/fruit_data.js"></script>
   <script src="js/retrieval.js"></script>
 </body>
 </html>

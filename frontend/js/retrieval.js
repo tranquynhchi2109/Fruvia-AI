@@ -41,6 +41,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalSplit = document.getElementById("modal-split");
   const modalPath = document.getElementById("modal-path");
 
+  // Fruit Knowledge Base Modal Elements
+  const kbSciName = document.getElementById("kb-sci-name");
+  const kbFamily = document.getElementById("kb-family");
+  const kbCalories = document.getElementById("kb-calories");
+  const kbOrigin = document.getElementById("kb-origin");
+  const kbVitamins = document.getElementById("kb-vitamins");
+  const kbBenefits = document.getElementById("kb-benefits");
+
   // State Variables
   let selectedFile = null;
   let queryDataUrl = null;
@@ -216,8 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showWarningBanner(title, message) {
     warningBannerContainer.innerHTML = "";
-    const banner = document.createElement("div");
-    banner.className = "alert-banner alert-banner-warning";
+    const banner.className = "alert-banner alert-banner-warning";
     banner.setAttribute("role", "alert");
 
     const content = document.createElement("div");
@@ -516,6 +523,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal(item, queryImgUrl) {
     const displayName = item.display_name || item.canonical_class || "Unknown";
     const originalClass = item.original_class || "unknown";
+    const canonicalClass = item.canonical_class || "unknown";
     const filename = item.filename || "unknown";
     const originalSplit = item.original_split || "unknown";
     const relativePath = item.relative_path || "";
@@ -526,6 +534,19 @@ document.addEventListener("DOMContentLoaded", () => {
     modalFilename.textContent = filename;
     modalSplit.textContent = originalSplit;
     modalPath.textContent = relativePath;
+
+    // Populate Fruit Knowledge Base details
+    if (typeof getFruitDetails === "function") {
+      const kb = getFruitDetails(canonicalClass);
+      if (kb) {
+        if (kbSciName) kbSciName.textContent = kb.scientificName || "-";
+        if (kbFamily) kbFamily.textContent = kb.family || "-";
+        if (kbCalories) kbCalories.textContent = kb.calories || "-";
+        if (kbOrigin) kbOrigin.textContent = kb.origin || "-";
+        if (kbVitamins) kbVitamins.textContent = kb.vitamins || "-";
+        if (kbBenefits) kbBenefits.textContent = kb.benefits || "-";
+      }
+    }
 
     modalMediaWrapper.innerHTML = "";
     if (Utils.isSafeImageUrl(item.image_url)) {
