@@ -1,0 +1,17 @@
+{
+  "total_vectors": 328190,
+  "unique_canonical_classes_count": 284,
+  "unique_original_classes_count": 410,
+  "datasets": {
+    "fruits-360-original-size": {
+      "vectors": 102551,
+      "original_classes_count": 148,
+      "canonical_classes_count": 41
+    },
+    "fruits262_full_original_v7": {
+      "vectors": 225639,
+      "original_classes_count": 262,
+      "canonical_classes_count": 262
+    }
+  }
+}

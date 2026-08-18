@@ -28,13 +28,13 @@ class FruitAppearance(BaseModel):
 
 
 class NutritionPer100g(BaseModel):
-    calories_kcal: float | int = 0
-    water_g: float | int = 0
-    protein_g: float | int = 0
-    carbohydrates_g: float | int = 0
-    sugars_g: float | int = 0
-    fiber_g: float | int = 0
-    fat_g: float | int = 0
+    calories_kcal: float | int | None = None
+    water_g: float | int | None = None
+    protein_g: float | int | None = None
+    carbohydrates_g: float | int | None = None
+    sugars_g: float | int | None = None
+    fiber_g: float | int | None = None
+    fat_g: float | int | None = None
 
 
 class FruitSource(BaseModel):
@@ -46,6 +46,7 @@ class FruitKnowledge(BaseModel):
     """Full detail schema for a canonical fruit species."""
 
     canonical_class: str
+    knowledge_status: str = Field(default="complete", description="complete | partial | minimal")
     names: FruitNames
     scientific_name: str
     family: FruitFamily

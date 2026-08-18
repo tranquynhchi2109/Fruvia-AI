@@ -4,7 +4,6 @@ Unit tests for Fruit Knowledge Base service and API endpoints.
 
 from __future__ import annotations
 
-import json
 import pytest
 from fastapi.testclient import TestClient
 
@@ -29,9 +28,11 @@ class TestFruitKnowledgeService:
 
     def test_list_canonical_classes(self, knowledge_service: FruitKnowledgeService) -> None:
         classes = knowledge_service.list_canonical_classes()
-        assert len(classes) == 18
+        assert len(classes) == 284
         assert "orange" in classes
         assert "apple" in classes
+        assert "bolwarra" in classes
+        assert "ackee" in classes
 
     def test_get_valid_fruit_knowledge(self, knowledge_service: FruitKnowledgeService) -> None:
         orange = knowledge_service.get_fruit_knowledge("orange")
@@ -40,6 +41,14 @@ class TestFruitKnowledgeService:
         assert orange.scientific_name == "Citrus sinensis"
         assert orange.family.scientific == "Rutaceae"
         assert orange.nutrition_per_100g.calories_kcal == 47
+
+    def test_get_bolwarra_regression_knowledge(self, knowledge_service: FruitKnowledgeService) -> None:
+        bolwarra = knowledge_service.get_fruit_knowledge("bolwarra")
+        assert bolwarra is not None
+        assert bolwarra.canonical_class == "bolwarra"
+        assert bolwarra.scientific_name == "Eupomatia laurina"
+        assert bolwarra.family.scientific == "Eupomatiaceae"
+        assert bolwarra.knowledge_status == "complete"
 
     def test_get_fruit_knowledge_case_insensitive(self, knowledge_service: FruitKnowledgeService) -> None:
         orange = knowledge_service.get_fruit_knowledge("ORANGE")
@@ -59,8 +68,9 @@ class TestFruitKnowledgeAPI:
         assert resp.status_code == 200
         data = resp.json()
         assert isinstance(data, list)
-        assert len(data) == 18
+        assert len(data) == 284
         assert "orange" in data
+        assert "bolwarra" in data
 
     def test_get_fruit_details_success(self, client: TestClient) -> None:
         resp = client.get("/api/fruits/orange")
@@ -70,6 +80,14 @@ class TestFruitKnowledgeAPI:
         assert data["scientific_name"] == "Citrus sinensis"
         assert "names" in data
         assert data["names"]["vi"] == "Cam"
+
+    def test_get_bolwarra_details_success(self, client: TestClient) -> None:
+        resp = client.get("/api/fruits/bolwarra")
+        assert resp.status_code == 200
+        data = resp.json()
+        assert data["canonical_class"] == "bolwarra"
+        assert data["scientific_name"] == "Eupomatia laurina"
+        assert data["family"]["scientific"] == "Eupomatiaceae"
 
     def test_get_fruit_details_not_found(self, client: TestClient) -> None:
         resp = client.get("/api/fruits/non_existent_fruit")

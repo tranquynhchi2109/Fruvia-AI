@@ -1,0 +1,3271 @@
+{
+  "abiu": {
+    "canonical_class": "abiu",
+    "display_name": "Abiu",
+    "aliases": [
+      "abiu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "acai": {
+    "canonical_class": "acai",
+    "display_name": "Acai",
+    "aliases": [
+      "acai"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "acerola": {
+    "canonical_class": "acerola",
+    "display_name": "Acerola",
+    "aliases": [
+      "acerola"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ackee": {
+    "canonical_class": "ackee",
+    "display_name": "Ackee",
+    "aliases": [
+      "ackee"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "alligator_apple": {
+    "canonical_class": "alligator_apple",
+    "display_name": "Alligator Apple",
+    "aliases": [
+      "alligator apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "almonds": {
+    "canonical_class": "almonds",
+    "display_name": "Almonds",
+    "aliases": [
+      "Almonds 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ambarella": {
+    "canonical_class": "ambarella",
+    "display_name": "Ambarella",
+    "aliases": [
+      "ambarella"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "apple": {
+    "canonical_class": "apple",
+    "display_name": "Apple",
+    "aliases": [
+      "Apple 10",
+      "Apple 11",
+      "Apple 12",
+      "Apple 13",
+      "Apple 14",
+      "Apple 17",
+      "Apple 18",
+      "Apple 19",
+      "Apple 20",
+      "Apple 21",
+      "Apple 22",
+      "Apple 23",
+      "Apple 5",
+      "Apple 6",
+      "Apple 7",
+      "Apple 8",
+      "Apple 9",
+      "Apple Braeburn 1",
+      "Apple Red Yellow 2",
+      "apple",
+      "apple_braeburn_1",
+      "apple_crimson_snow_1",
+      "apple_golden_1",
+      "apple_golden_2",
+      "apple_golden_3",
+      "apple_granny_smith_1",
+      "apple_pink_lady_1",
+      "apple_red_1",
+      "apple_red_2",
+      "apple_red_3",
+      "apple_red_delicios_1",
+      "apple_red_yellow_1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "apricot": {
+    "canonical_class": "apricot",
+    "display_name": "Apricot",
+    "aliases": [
+      "apricot"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "araza": {
+    "canonical_class": "araza",
+    "display_name": "Araza",
+    "aliases": [
+      "araza"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "avocado": {
+    "canonical_class": "avocado",
+    "display_name": "Avocado",
+    "aliases": [
+      "Avocado Black 1",
+      "Avocado Black 2",
+      "Avocado Green 1",
+      "avocado"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "bael": {
+    "canonical_class": "bael",
+    "display_name": "Bael",
+    "aliases": [
+      "bael"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "banana": {
+    "canonical_class": "banana",
+    "display_name": "Banana",
+    "aliases": [
+      "Banana 3",
+      "Banana 4",
+      "banana"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "barbadine": {
+    "canonical_class": "barbadine",
+    "display_name": "Barbadine",
+    "aliases": [
+      "barbadine"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "barberry": {
+    "canonical_class": "barberry",
+    "display_name": "Barberry",
+    "aliases": [
+      "barberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bayberry": {
+    "canonical_class": "bayberry",
+    "display_name": "Bayberry",
+    "aliases": [
+      "bayberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "beach_plum": {
+    "canonical_class": "beach_plum",
+    "display_name": "Beach Plum",
+    "aliases": [
+      "beach plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bean_pod": {
+    "canonical_class": "bean_pod",
+    "display_name": "Bean Pod",
+    "aliases": [
+      "Bean pod 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "beans": {
+    "canonical_class": "beans",
+    "display_name": "Beans",
+    "aliases": [
+      "Beans 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bearberry": {
+    "canonical_class": "bearberry",
+    "display_name": "Bearberry",
+    "aliases": [
+      "bearberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bell_pepper": {
+    "canonical_class": "bell_pepper",
+    "display_name": "Bell Pepper",
+    "aliases": [
+      "bell pepper"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "betel_nut": {
+    "canonical_class": "betel_nut",
+    "display_name": "Betel Nut",
+    "aliases": [
+      "betel nut"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bignay": {
+    "canonical_class": "bignay",
+    "display_name": "Bignay",
+    "aliases": [
+      "bignay"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bilimbi": {
+    "canonical_class": "bilimbi",
+    "display_name": "Bilimbi",
+    "aliases": [
+      "bilimbi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bitter_gourd": {
+    "canonical_class": "bitter_gourd",
+    "display_name": "Bitter Gourd",
+    "aliases": [
+      "bitter gourd"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "black_berry": {
+    "canonical_class": "black_berry",
+    "display_name": "Black Berry",
+    "aliases": [
+      "black berry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "black_cherry": {
+    "canonical_class": "black_cherry",
+    "display_name": "Black Cherry",
+    "aliases": [
+      "black cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "black_currant": {
+    "canonical_class": "black_currant",
+    "display_name": "Black Currant",
+    "aliases": [
+      "black currant"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "black_mullberry": {
+    "canonical_class": "black_mullberry",
+    "display_name": "Black Mullberry",
+    "aliases": [
+      "black mullberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "black_sapote": {
+    "canonical_class": "black_sapote",
+    "display_name": "Black Sapote",
+    "aliases": [
+      "black sapote"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "blackberry": {
+    "canonical_class": "blackberry",
+    "display_name": "Blackberry",
+    "aliases": [
+      "Blackberry 1",
+      "Blackberry 2",
+      "Blackberry 3",
+      "Blackberry 4",
+      "Blackberry 5"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "blueberry": {
+    "canonical_class": "blueberry",
+    "display_name": "Blueberry",
+    "aliases": [
+      "blueberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bolwarra": {
+    "canonical_class": "bolwarra",
+    "display_name": "Bolwarra",
+    "aliases": [
+      "bolwarra"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bottle_gourd": {
+    "canonical_class": "bottle_gourd",
+    "display_name": "Bottle Gourd",
+    "aliases": [
+      "bottle gourd"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "brazil_nut": {
+    "canonical_class": "brazil_nut",
+    "display_name": "Brazil Nut",
+    "aliases": [
+      "brazil nut"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "bread_fruit": {
+    "canonical_class": "bread_fruit",
+    "display_name": "Bread Fruit",
+    "aliases": [
+      "bread fruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "buddha_s_hand": {
+    "canonical_class": "buddha_s_hand",
+    "display_name": "Buddha S Hand",
+    "aliases": [
+      "buddha's hand"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "buffaloberry": {
+    "canonical_class": "buffaloberry",
+    "display_name": "Buffaloberry",
+    "aliases": [
+      "buffaloberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "burdekin_plum": {
+    "canonical_class": "burdekin_plum",
+    "display_name": "Burdekin Plum",
+    "aliases": [
+      "burdekin plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "burmese_grape": {
+    "canonical_class": "burmese_grape",
+    "display_name": "Burmese Grape",
+    "aliases": [
+      "burmese grape"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cabbage_red": {
+    "canonical_class": "cabbage_red",
+    "display_name": "Cabbage Red",
+    "aliases": [
+      "Cabbage red 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cabbage_white": {
+    "canonical_class": "cabbage_white",
+    "display_name": "Cabbage White",
+    "aliases": [
+      "cabbage_white_1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cactus_fruit": {
+    "canonical_class": "cactus_fruit",
+    "display_name": "Cactus Fruit",
+    "aliases": [
+      "Cactus fruit green 1",
+      "Cactus fruit red 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "caimito": {
+    "canonical_class": "caimito",
+    "display_name": "Caimito",
+    "aliases": [
+      "caimito"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "caju_seed": {
+    "canonical_class": "caju_seed",
+    "display_name": "Caju Seed",
+    "aliases": [
+      "Caju seed 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "camu_camu": {
+    "canonical_class": "camu_camu",
+    "display_name": "Camu Camu",
+    "aliases": [
+      "camu camu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "canistel": {
+    "canonical_class": "canistel",
+    "display_name": "Canistel",
+    "aliases": [
+      "canistel"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cantaloupe": {
+    "canonical_class": "cantaloupe",
+    "display_name": "Cantaloupe",
+    "aliases": [
+      "Cantaloupe 3",
+      "cantaloupe"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cape_gooseberry": {
+    "canonical_class": "cape_gooseberry",
+    "display_name": "Cape Gooseberry",
+    "aliases": [
+      "cape gooseberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "carambola": {
+    "canonical_class": "carambola",
+    "display_name": "Carambola",
+    "aliases": [
+      "Carambola 2",
+      "Carambola 3",
+      "carambola"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cardon": {
+    "canonical_class": "cardon",
+    "display_name": "Cardon",
+    "aliases": [
+      "cardon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "carrot": {
+    "canonical_class": "carrot",
+    "display_name": "Carrot",
+    "aliases": [
+      "Carrot 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cashew": {
+    "canonical_class": "cashew",
+    "display_name": "Cashew",
+    "aliases": [
+      "cashew"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cedar_bay_cherry": {
+    "canonical_class": "cedar_bay_cherry",
+    "display_name": "Cedar Bay Cherry",
+    "aliases": [
+      "cedar bay cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "celery": {
+    "canonical_class": "celery",
+    "display_name": "Celery",
+    "aliases": [
+      "Celery 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cempedak": {
+    "canonical_class": "cempedak",
+    "display_name": "Cempedak",
+    "aliases": [
+      "cempedak"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ceylon_gooseberry": {
+    "canonical_class": "ceylon_gooseberry",
+    "display_name": "Ceylon Gooseberry",
+    "aliases": [
+      "ceylon gooseberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "che": {
+    "canonical_class": "che",
+    "display_name": "Che",
+    "aliases": [
+      "che"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "chenet": {
+    "canonical_class": "chenet",
+    "display_name": "Chenet",
+    "aliases": [
+      "chenet"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cherimoya": {
+    "canonical_class": "cherimoya",
+    "display_name": "Cherimoya",
+    "aliases": [
+      "Cherimoya 1",
+      "cherimoya"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cherry": {
+    "canonical_class": "cherry",
+    "display_name": "Cherry",
+    "aliases": [
+      "Cherry 3",
+      "Cherry 4",
+      "Cherry 5",
+      "Cherry Rainier 2",
+      "Cherry Rainier 3",
+      "Cherry Sour 1",
+      "Cherry Wax 1",
+      "Cherry Wax 2",
+      "Cherry Wax Red 2",
+      "Cherry Wax Red 3",
+      "cherry"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "chico": {
+    "canonical_class": "chico",
+    "display_name": "Chico",
+    "aliases": [
+      "chico"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "chokeberry": {
+    "canonical_class": "chokeberry",
+    "display_name": "Chokeberry",
+    "aliases": [
+      "chokeberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "clementine": {
+    "canonical_class": "clementine",
+    "display_name": "Clementine",
+    "aliases": [
+      "clementine"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cloudberry": {
+    "canonical_class": "cloudberry",
+    "display_name": "Cloudberry",
+    "aliases": [
+      "cloudberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cluster_fig": {
+    "canonical_class": "cluster_fig",
+    "display_name": "Cluster Fig",
+    "aliases": [
+      "cluster fig"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cocoa_bean": {
+    "canonical_class": "cocoa_bean",
+    "display_name": "Cocoa Bean",
+    "aliases": [
+      "cocoa bean"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "coconut": {
+    "canonical_class": "coconut",
+    "display_name": "Coconut",
+    "aliases": [
+      "coconut"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "coffee": {
+    "canonical_class": "coffee",
+    "display_name": "Coffee",
+    "aliases": [
+      "coffee"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "common_buckthorn": {
+    "canonical_class": "common_buckthorn",
+    "display_name": "Common Buckthorn",
+    "aliases": [
+      "common buckthorn"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "corn_kernel": {
+    "canonical_class": "corn_kernel",
+    "display_name": "Corn Kernel",
+    "aliases": [
+      "corn kernel"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cornelian_cherry": {
+    "canonical_class": "cornelian_cherry",
+    "display_name": "Cornelian Cherry",
+    "aliases": [
+      "cornelian cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "crab_apple": {
+    "canonical_class": "crab_apple",
+    "display_name": "Crab Apple",
+    "aliases": [
+      "crab apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cranberry": {
+    "canonical_class": "cranberry",
+    "display_name": "Cranberry",
+    "aliases": [
+      "cranberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "crowberry": {
+    "canonical_class": "crowberry",
+    "display_name": "Crowberry",
+    "aliases": [
+      "crowberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cucumber": {
+    "canonical_class": "cucumber",
+    "display_name": "Cucumber",
+    "aliases": [
+      "Cucumber 1",
+      "Cucumber 10",
+      "Cucumber 11",
+      "Cucumber 3",
+      "Cucumber 4",
+      "Cucumber 5",
+      "Cucumber 6",
+      "Cucumber 7",
+      "Cucumber 8",
+      "Cucumber 9"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "cupuacu": {
+    "canonical_class": "cupuacu",
+    "display_name": "Cupuacu",
+    "aliases": [
+      "cupuacu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "custard_apple": {
+    "canonical_class": "custard_apple",
+    "display_name": "Custard Apple",
+    "aliases": [
+      "custard apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "damson": {
+    "canonical_class": "damson",
+    "display_name": "Damson",
+    "aliases": [
+      "damson"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "date": {
+    "canonical_class": "date",
+    "display_name": "Date",
+    "aliases": [
+      "date"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "dates": {
+    "canonical_class": "dates",
+    "display_name": "Dates",
+    "aliases": [
+      "Dates 2"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "desert_fig": {
+    "canonical_class": "desert_fig",
+    "display_name": "Desert Fig",
+    "aliases": [
+      "desert fig"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "desert_lime": {
+    "canonical_class": "desert_lime",
+    "display_name": "Desert Lime",
+    "aliases": [
+      "desert lime"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "dewberry": {
+    "canonical_class": "dewberry",
+    "display_name": "Dewberry",
+    "aliases": [
+      "dewberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "dragonfruit": {
+    "canonical_class": "dragonfruit",
+    "display_name": "Dragonfruit",
+    "aliases": [
+      "dragonfruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "durian": {
+    "canonical_class": "durian",
+    "display_name": "Durian",
+    "aliases": [
+      "durian"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "eggplant": {
+    "canonical_class": "eggplant",
+    "display_name": "Eggplant",
+    "aliases": [
+      "eggplant",
+      "eggplant_long_1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "elderberry": {
+    "canonical_class": "elderberry",
+    "display_name": "Elderberry",
+    "aliases": [
+      "elderberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "elephant_apple": {
+    "canonical_class": "elephant_apple",
+    "display_name": "Elephant Apple",
+    "aliases": [
+      "elephant apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "emblic": {
+    "canonical_class": "emblic",
+    "display_name": "Emblic",
+    "aliases": [
+      "emblic"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "entawak": {
+    "canonical_class": "entawak",
+    "display_name": "Entawak",
+    "aliases": [
+      "entawak"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "etrog": {
+    "canonical_class": "etrog",
+    "display_name": "Etrog",
+    "aliases": [
+      "etrog"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "feijoa": {
+    "canonical_class": "feijoa",
+    "display_name": "Feijoa",
+    "aliases": [
+      "feijoa"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "fibrous_satinash": {
+    "canonical_class": "fibrous_satinash",
+    "display_name": "Fibrous Satinash",
+    "aliases": [
+      "fibrous satinash"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "fig": {
+    "canonical_class": "fig",
+    "display_name": "Fig",
+    "aliases": [
+      "fig"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "finger_lime": {
+    "canonical_class": "finger_lime",
+    "display_name": "Finger Lime",
+    "aliases": [
+      "finger lime"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "galia_melon": {
+    "canonical_class": "galia_melon",
+    "display_name": "Galia Melon",
+    "aliases": [
+      "galia melon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "gandaria": {
+    "canonical_class": "gandaria",
+    "display_name": "Gandaria",
+    "aliases": [
+      "gandaria"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "genipap": {
+    "canonical_class": "genipap",
+    "display_name": "Genipap",
+    "aliases": [
+      "genipap"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ginger": {
+    "canonical_class": "ginger",
+    "display_name": "Ginger",
+    "aliases": [
+      "Ginger 2"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "goji": {
+    "canonical_class": "goji",
+    "display_name": "Goji",
+    "aliases": [
+      "goji"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "gooseberry": {
+    "canonical_class": "gooseberry",
+    "display_name": "Gooseberry",
+    "aliases": [
+      "Gooseberry 1",
+      "gooseberry"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "goumi": {
+    "canonical_class": "goumi",
+    "display_name": "Goumi",
+    "aliases": [
+      "goumi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "grape": {
+    "canonical_class": "grape",
+    "display_name": "Grape",
+    "aliases": [
+      "Grape 1",
+      "Grape not ripen 1",
+      "Grape pink 2",
+      "grape"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "grapefruit": {
+    "canonical_class": "grapefruit",
+    "display_name": "Grapefruit",
+    "aliases": [
+      "grapefruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "greengage": {
+    "canonical_class": "greengage",
+    "display_name": "Greengage",
+    "aliases": [
+      "greengage"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "grenadilla": {
+    "canonical_class": "grenadilla",
+    "display_name": "Grenadilla",
+    "aliases": [
+      "grenadilla"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "guanabana": {
+    "canonical_class": "guanabana",
+    "display_name": "Guanabana",
+    "aliases": [
+      "guanabana"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "guarana": {
+    "canonical_class": "guarana",
+    "display_name": "Guarana",
+    "aliases": [
+      "guarana"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "guava": {
+    "canonical_class": "guava",
+    "display_name": "Guava",
+    "aliases": [
+      "guava"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "guavaberry": {
+    "canonical_class": "guavaberry",
+    "display_name": "Guavaberry",
+    "aliases": [
+      "guavaberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "hackberry": {
+    "canonical_class": "hackberry",
+    "display_name": "Hackberry",
+    "aliases": [
+      "hackberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "hard_kiwi": {
+    "canonical_class": "hard_kiwi",
+    "display_name": "Hard Kiwi",
+    "aliases": [
+      "hard kiwi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "hawthorn": {
+    "canonical_class": "hawthorn",
+    "display_name": "Hawthorn",
+    "aliases": [
+      "hawthorn"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "hog_plum": {
+    "canonical_class": "hog_plum",
+    "display_name": "Hog Plum",
+    "aliases": [
+      "hog plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "honeyberry": {
+    "canonical_class": "honeyberry",
+    "display_name": "Honeyberry",
+    "aliases": [
+      "honeyberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "honeysuckle": {
+    "canonical_class": "honeysuckle",
+    "display_name": "Honeysuckle",
+    "aliases": [
+      "honeysuckle"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "horned_melon": {
+    "canonical_class": "horned_melon",
+    "display_name": "Horned Melon",
+    "aliases": [
+      "horned melon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "illawarra_plum": {
+    "canonical_class": "illawarra_plum",
+    "display_name": "Illawarra Plum",
+    "aliases": [
+      "illawarra plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "indian_almond": {
+    "canonical_class": "indian_almond",
+    "display_name": "Indian Almond",
+    "aliases": [
+      "indian almond"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "indian_strawberry": {
+    "canonical_class": "indian_strawberry",
+    "display_name": "Indian Strawberry",
+    "aliases": [
+      "indian strawberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ita_palm": {
+    "canonical_class": "ita_palm",
+    "display_name": "Ita Palm",
+    "aliases": [
+      "ita palm"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jaboticaba": {
+    "canonical_class": "jaboticaba",
+    "display_name": "Jaboticaba",
+    "aliases": [
+      "jaboticaba"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jackfruit": {
+    "canonical_class": "jackfruit",
+    "display_name": "Jackfruit",
+    "aliases": [
+      "jackfruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jalapeno": {
+    "canonical_class": "jalapeno",
+    "display_name": "Jalapeno",
+    "aliases": [
+      "jalapeno"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jamaica_cherry": {
+    "canonical_class": "jamaica_cherry",
+    "display_name": "Jamaica Cherry",
+    "aliases": [
+      "jamaica cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jambul": {
+    "canonical_class": "jambul",
+    "display_name": "Jambul",
+    "aliases": [
+      "jambul"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "japanese_raisin": {
+    "canonical_class": "japanese_raisin",
+    "display_name": "Japanese Raisin",
+    "aliases": [
+      "japanese raisin"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jasmine": {
+    "canonical_class": "jasmine",
+    "display_name": "Jasmine",
+    "aliases": [
+      "jasmine"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jatoba": {
+    "canonical_class": "jatoba",
+    "display_name": "Jatoba",
+    "aliases": [
+      "jatoba"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jocote": {
+    "canonical_class": "jocote",
+    "display_name": "Jocote",
+    "aliases": [
+      "jocote"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jostaberry": {
+    "canonical_class": "jostaberry",
+    "display_name": "Jostaberry",
+    "aliases": [
+      "jostaberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "jujube": {
+    "canonical_class": "jujube",
+    "display_name": "Jujube",
+    "aliases": [
+      "jujube"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "juniper_berry": {
+    "canonical_class": "juniper_berry",
+    "display_name": "Juniper Berry",
+    "aliases": [
+      "juniper berry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kaffir_lime": {
+    "canonical_class": "kaffir_lime",
+    "display_name": "Kaffir Lime",
+    "aliases": [
+      "kaffir lime"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kahikatea": {
+    "canonical_class": "kahikatea",
+    "display_name": "Kahikatea",
+    "aliases": [
+      "kahikatea"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kakadu_plum": {
+    "canonical_class": "kakadu_plum",
+    "display_name": "Kakadu Plum",
+    "aliases": [
+      "kakadu plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "keppel": {
+    "canonical_class": "keppel",
+    "display_name": "Keppel",
+    "aliases": [
+      "keppel"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kiwi": {
+    "canonical_class": "kiwi",
+    "display_name": "Kiwi",
+    "aliases": [
+      "kiwi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "kumquat": {
+    "canonical_class": "kumquat",
+    "display_name": "Kumquat",
+    "aliases": [
+      "kumquat"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kundong": {
+    "canonical_class": "kundong",
+    "display_name": "Kundong",
+    "aliases": [
+      "kundong"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "kutjera": {
+    "canonical_class": "kutjera",
+    "display_name": "Kutjera",
+    "aliases": [
+      "kutjera"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lablab": {
+    "canonical_class": "lablab",
+    "display_name": "Lablab",
+    "aliases": [
+      "lablab"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "langsat": {
+    "canonical_class": "langsat",
+    "display_name": "Langsat",
+    "aliases": [
+      "langsat"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lapsi": {
+    "canonical_class": "lapsi",
+    "display_name": "Lapsi",
+    "aliases": [
+      "lapsi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lemon": {
+    "canonical_class": "lemon",
+    "display_name": "Lemon",
+    "aliases": [
+      "lemon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "lemon_aspen": {
+    "canonical_class": "lemon_aspen",
+    "display_name": "Lemon Aspen",
+    "aliases": [
+      "lemon aspen"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "leucaena": {
+    "canonical_class": "leucaena",
+    "display_name": "Leucaena",
+    "aliases": [
+      "leucaena"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lillipilli": {
+    "canonical_class": "lillipilli",
+    "display_name": "Lillipilli",
+    "aliases": [
+      "lillipilli"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lime": {
+    "canonical_class": "lime",
+    "display_name": "Lime",
+    "aliases": [
+      "lime"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lingonberry": {
+    "canonical_class": "lingonberry",
+    "display_name": "Lingonberry",
+    "aliases": [
+      "lingonberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "loganberry": {
+    "canonical_class": "loganberry",
+    "display_name": "Loganberry",
+    "aliases": [
+      "loganberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "longan": {
+    "canonical_class": "longan",
+    "display_name": "Longan",
+    "aliases": [
+      "longan"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "loquat": {
+    "canonical_class": "loquat",
+    "display_name": "Loquat",
+    "aliases": [
+      "loquat"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lucuma": {
+    "canonical_class": "lucuma",
+    "display_name": "Lucuma",
+    "aliases": [
+      "lucuma"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lulo": {
+    "canonical_class": "lulo",
+    "display_name": "Lulo",
+    "aliases": [
+      "lulo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "lychee": {
+    "canonical_class": "lychee",
+    "display_name": "Lychee",
+    "aliases": [
+      "lychee"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "mabolo": {
+    "canonical_class": "mabolo",
+    "display_name": "Mabolo",
+    "aliases": [
+      "mabolo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "macadamia": {
+    "canonical_class": "macadamia",
+    "display_name": "Macadamia",
+    "aliases": [
+      "macadamia"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "malay_apple": {
+    "canonical_class": "malay_apple",
+    "display_name": "Malay Apple",
+    "aliases": [
+      "malay apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mamey_apple": {
+    "canonical_class": "mamey_apple",
+    "display_name": "Mamey Apple",
+    "aliases": [
+      "mamey apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mandarine": {
+    "canonical_class": "mandarine",
+    "display_name": "Mandarine",
+    "aliases": [
+      "mandarine"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mango": {
+    "canonical_class": "mango",
+    "display_name": "Mango",
+    "aliases": [
+      "mango"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "mangosteen": {
+    "canonical_class": "mangosteen",
+    "display_name": "Mangosteen",
+    "aliases": [
+      "mangosteen"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "manila_tamarind": {
+    "canonical_class": "manila_tamarind",
+    "display_name": "Manila Tamarind",
+    "aliases": [
+      "manila tamarind"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "marang": {
+    "canonical_class": "marang",
+    "display_name": "Marang",
+    "aliases": [
+      "marang"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mayhaw": {
+    "canonical_class": "mayhaw",
+    "display_name": "Mayhaw",
+    "aliases": [
+      "mayhaw"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "maypop": {
+    "canonical_class": "maypop",
+    "display_name": "Maypop",
+    "aliases": [
+      "maypop"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "medlar": {
+    "canonical_class": "medlar",
+    "display_name": "Medlar",
+    "aliases": [
+      "medlar"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "melinjo": {
+    "canonical_class": "melinjo",
+    "display_name": "Melinjo",
+    "aliases": [
+      "melinjo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "melon_pear": {
+    "canonical_class": "melon_pear",
+    "display_name": "Melon Pear",
+    "aliases": [
+      "melon pear"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "midyim": {
+    "canonical_class": "midyim",
+    "display_name": "Midyim",
+    "aliases": [
+      "midyim"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "miracle_fruit": {
+    "canonical_class": "miracle_fruit",
+    "display_name": "Miracle Fruit",
+    "aliases": [
+      "miracle fruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mock_strawberry": {
+    "canonical_class": "mock_strawberry",
+    "display_name": "Mock Strawberry",
+    "aliases": [
+      "mock strawberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "monkfruit": {
+    "canonical_class": "monkfruit",
+    "display_name": "Monkfruit",
+    "aliases": [
+      "monkfruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "monstera_deliciosa": {
+    "canonical_class": "monstera_deliciosa",
+    "display_name": "Monstera Deliciosa",
+    "aliases": [
+      "monstera deliciosa"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "morinda": {
+    "canonical_class": "morinda",
+    "display_name": "Morinda",
+    "aliases": [
+      "morinda"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mountain_papaya": {
+    "canonical_class": "mountain_papaya",
+    "display_name": "Mountain Papaya",
+    "aliases": [
+      "mountain papaya"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mountain_soursop": {
+    "canonical_class": "mountain_soursop",
+    "display_name": "Mountain Soursop",
+    "aliases": [
+      "mountain soursop"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "mundu": {
+    "canonical_class": "mundu",
+    "display_name": "Mundu",
+    "aliases": [
+      "mundu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "muskmelon": {
+    "canonical_class": "muskmelon",
+    "display_name": "Muskmelon",
+    "aliases": [
+      "muskmelon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "myrtle": {
+    "canonical_class": "myrtle",
+    "display_name": "Myrtle",
+    "aliases": [
+      "myrtle"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nance": {
+    "canonical_class": "nance",
+    "display_name": "Nance",
+    "aliases": [
+      "nance"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nannyberry": {
+    "canonical_class": "nannyberry",
+    "display_name": "Nannyberry",
+    "aliases": [
+      "nannyberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "naranjilla": {
+    "canonical_class": "naranjilla",
+    "display_name": "Naranjilla",
+    "aliases": [
+      "naranjilla"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "native_cherry": {
+    "canonical_class": "native_cherry",
+    "display_name": "Native Cherry",
+    "aliases": [
+      "native cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "native_gooseberry": {
+    "canonical_class": "native_gooseberry",
+    "display_name": "Native Gooseberry",
+    "aliases": [
+      "native gooseberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nectarine": {
+    "canonical_class": "nectarine",
+    "display_name": "Nectarine",
+    "aliases": [
+      "Nectarine Flat 2",
+      "nectarine"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "neem": {
+    "canonical_class": "neem",
+    "display_name": "Neem",
+    "aliases": [
+      "neem"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nungu": {
+    "canonical_class": "nungu",
+    "display_name": "Nungu",
+    "aliases": [
+      "nungu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nut": {
+    "canonical_class": "nut",
+    "display_name": "Nut",
+    "aliases": [
+      "Nut 1",
+      "Nut 2",
+      "Nut 3",
+      "Nut 4",
+      "Nut 5"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "nutmeg": {
+    "canonical_class": "nutmeg",
+    "display_name": "Nutmeg",
+    "aliases": [
+      "nutmeg"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "oil_palm": {
+    "canonical_class": "oil_palm",
+    "display_name": "Oil Palm",
+    "aliases": [
+      "oil palm"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "old_world_sycomore": {
+    "canonical_class": "old_world_sycomore",
+    "display_name": "Old World Sycomore",
+    "aliases": [
+      "old world sycomore"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "olive": {
+    "canonical_class": "olive",
+    "display_name": "Olive",
+    "aliases": [
+      "olive"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "onion": {
+    "canonical_class": "onion",
+    "display_name": "Onion",
+    "aliases": [
+      "Onion 2",
+      "Onion Red 2",
+      "Onion White 2"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "orange": {
+    "canonical_class": "orange",
+    "display_name": "Orange",
+    "aliases": [
+      "Orange 2",
+      "Orange 3",
+      "Orange 4",
+      "Orange peeled 1",
+      "orange"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "oregon_grape": {
+    "canonical_class": "oregon_grape",
+    "display_name": "Oregon Grape",
+    "aliases": [
+      "oregon grape"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "otaheite_apple": {
+    "canonical_class": "otaheite_apple",
+    "display_name": "Otaheite Apple",
+    "aliases": [
+      "otaheite apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "papaya": {
+    "canonical_class": "papaya",
+    "display_name": "Papaya",
+    "aliases": [
+      "Papaya 2",
+      "papaya"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "passion_fruit": {
+    "canonical_class": "passion_fruit",
+    "display_name": "Passion Fruit",
+    "aliases": [
+      "passion fruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pawpaw": {
+    "canonical_class": "pawpaw",
+    "display_name": "Pawpaw",
+    "aliases": [
+      "pawpaw"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pea": {
+    "canonical_class": "pea",
+    "display_name": "Pea",
+    "aliases": [
+      "pea"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "peach": {
+    "canonical_class": "peach",
+    "display_name": "Peach",
+    "aliases": [
+      "Peach 3",
+      "Peach 4",
+      "Peach 5",
+      "Peach 6"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "peanut": {
+    "canonical_class": "peanut",
+    "display_name": "Peanut",
+    "aliases": [
+      "peanut"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "peanut_shell_1x": {
+    "canonical_class": "peanut_shell_1x",
+    "display_name": "Peanut Shell 1x",
+    "aliases": [
+      "Peanut shell 1x 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pear": {
+    "canonical_class": "pear",
+    "display_name": "Pear",
+    "aliases": [
+      "Pear 1",
+      "Pear 10",
+      "Pear 11",
+      "Pear 12",
+      "Pear 13",
+      "Pear 14",
+      "Pear 3",
+      "Pear 5",
+      "Pear 6",
+      "Pear 7",
+      "Pear 8",
+      "Pear 9",
+      "Pear common 1",
+      "pear"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "pepper": {
+    "canonical_class": "pepper",
+    "display_name": "Pepper",
+    "aliases": [
+      "Pepper 1",
+      "Pepper 2",
+      "Pepper Orange 2",
+      "Pepper Red 2",
+      "Pepper Red 3",
+      "Pepper Red 4",
+      "Pepper Red 5"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pequi": {
+    "canonical_class": "pequi",
+    "display_name": "Pequi",
+    "aliases": [
+      "pequi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "persimmon": {
+    "canonical_class": "persimmon",
+    "display_name": "Persimmon",
+    "aliases": [
+      "persimmon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pigeon_plum": {
+    "canonical_class": "pigeon_plum",
+    "display_name": "Pigeon Plum",
+    "aliases": [
+      "pigeon plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pigface": {
+    "canonical_class": "pigface",
+    "display_name": "Pigface",
+    "aliases": [
+      "pigface"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pili_nut": {
+    "canonical_class": "pili_nut",
+    "display_name": "Pili Nut",
+    "aliases": [
+      "pili nut"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pineapple": {
+    "canonical_class": "pineapple",
+    "display_name": "Pineapple",
+    "aliases": [
+      "pineapple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "pineberry": {
+    "canonical_class": "pineberry",
+    "display_name": "Pineberry",
+    "aliases": [
+      "pineberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pistachio": {
+    "canonical_class": "pistachio",
+    "display_name": "Pistachio",
+    "aliases": [
+      "Pistachio 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pitomba": {
+    "canonical_class": "pitomba",
+    "display_name": "Pitomba",
+    "aliases": [
+      "pitomba"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "plum": {
+    "canonical_class": "plum",
+    "display_name": "Plum",
+    "aliases": [
+      "Plum 4",
+      "Plum 5"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "plumcot": {
+    "canonical_class": "plumcot",
+    "display_name": "Plumcot",
+    "aliases": [
+      "plumcot"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "podocarpus": {
+    "canonical_class": "podocarpus",
+    "display_name": "Podocarpus",
+    "aliases": [
+      "podocarpus"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pomegranate": {
+    "canonical_class": "pomegranate",
+    "display_name": "Pomegranate",
+    "aliases": [
+      "pomegranate"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "pomelo": {
+    "canonical_class": "pomelo",
+    "display_name": "Pomelo",
+    "aliases": [
+      "pomelo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "prikly_pear": {
+    "canonical_class": "prikly_pear",
+    "display_name": "Prikly Pear",
+    "aliases": [
+      "prikly pear"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pulasan": {
+    "canonical_class": "pulasan",
+    "display_name": "Pulasan",
+    "aliases": [
+      "pulasan"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pumpkin": {
+    "canonical_class": "pumpkin",
+    "display_name": "Pumpkin",
+    "aliases": [
+      "pumpkin"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "pupunha": {
+    "canonical_class": "pupunha",
+    "display_name": "Pupunha",
+    "aliases": [
+      "pupunha"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "purple_apple_berry": {
+    "canonical_class": "purple_apple_berry",
+    "display_name": "Purple Apple Berry",
+    "aliases": [
+      "purple apple berry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "quandong": {
+    "canonical_class": "quandong",
+    "display_name": "Quandong",
+    "aliases": [
+      "quandong"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "quince": {
+    "canonical_class": "quince",
+    "display_name": "Quince",
+    "aliases": [
+      "Quince 2",
+      "Quince 3",
+      "Quince 4",
+      "quince"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rambutan": {
+    "canonical_class": "rambutan",
+    "display_name": "Rambutan",
+    "aliases": [
+      "rambutan"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rangpur": {
+    "canonical_class": "rangpur",
+    "display_name": "Rangpur",
+    "aliases": [
+      "rangpur"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "raspberry": {
+    "canonical_class": "raspberry",
+    "display_name": "Raspberry",
+    "aliases": [
+      "Raspberry 2",
+      "Raspberry 3",
+      "Raspberry 4",
+      "Raspberry 5",
+      "Raspberry 6",
+      "raspberry"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "red_mulberry": {
+    "canonical_class": "red_mulberry",
+    "display_name": "Red Mulberry",
+    "aliases": [
+      "red mulberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "redcurrant": {
+    "canonical_class": "redcurrant",
+    "display_name": "Redcurrant",
+    "aliases": [
+      "redcurrant"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "riberry": {
+    "canonical_class": "riberry",
+    "display_name": "Riberry",
+    "aliases": [
+      "riberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ridged_gourd": {
+    "canonical_class": "ridged_gourd",
+    "display_name": "Ridged Gourd",
+    "aliases": [
+      "ridged gourd"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rimu": {
+    "canonical_class": "rimu",
+    "display_name": "Rimu",
+    "aliases": [
+      "rimu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rose_hip": {
+    "canonical_class": "rose_hip",
+    "display_name": "Rose Hip",
+    "aliases": [
+      "rose hip"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rose_leaf_bramble": {
+    "canonical_class": "rose_leaf_bramble",
+    "display_name": "Rose Leaf Bramble",
+    "aliases": [
+      "rose-leaf bramble"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "rose_myrtle": {
+    "canonical_class": "rose_myrtle",
+    "display_name": "Rose Myrtle",
+    "aliases": [
+      "rose myrtle"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "saguaro": {
+    "canonical_class": "saguaro",
+    "display_name": "Saguaro",
+    "aliases": [
+      "saguaro"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "salak": {
+    "canonical_class": "salak",
+    "display_name": "Salak",
+    "aliases": [
+      "salak"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "salal": {
+    "canonical_class": "salal",
+    "display_name": "Salal",
+    "aliases": [
+      "salal"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "salmonberry": {
+    "canonical_class": "salmonberry",
+    "display_name": "Salmonberry",
+    "aliases": [
+      "salmonberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sandpaper_fig": {
+    "canonical_class": "sandpaper_fig",
+    "display_name": "Sandpaper Fig",
+    "aliases": [
+      "sandpaper fig"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "santol": {
+    "canonical_class": "santol",
+    "display_name": "Santol",
+    "aliases": [
+      "santol"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sapodilla": {
+    "canonical_class": "sapodilla",
+    "display_name": "Sapodilla",
+    "aliases": [
+      "sapodilla"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "saskatoon": {
+    "canonical_class": "saskatoon",
+    "display_name": "Saskatoon",
+    "aliases": [
+      "saskatoon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sea_buckthorn": {
+    "canonical_class": "sea_buckthorn",
+    "display_name": "Sea Buckthorn",
+    "aliases": [
+      "sea buckthorn"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sea_grape": {
+    "canonical_class": "sea_grape",
+    "display_name": "Sea Grape",
+    "aliases": [
+      "sea grape"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "snowberry": {
+    "canonical_class": "snowberry",
+    "display_name": "Snowberry",
+    "aliases": [
+      "snowberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "soncoya": {
+    "canonical_class": "soncoya",
+    "display_name": "Soncoya",
+    "aliases": [
+      "soncoya"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "strawberry": {
+    "canonical_class": "strawberry",
+    "display_name": "Strawberry",
+    "aliases": [
+      "Strawberry 2",
+      "Strawberry 3",
+      "strawberry"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "strawberry_guava": {
+    "canonical_class": "strawberry_guava",
+    "display_name": "Strawberry Guava",
+    "aliases": [
+      "strawberry guava"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sugar_apple": {
+    "canonical_class": "sugar_apple",
+    "display_name": "Sugar Apple",
+    "aliases": [
+      "sugar apple"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "surinam_cherry": {
+    "canonical_class": "surinam_cherry",
+    "display_name": "Surinam Cherry",
+    "aliases": [
+      "surinam cherry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "sycamore_fig": {
+    "canonical_class": "sycamore_fig",
+    "display_name": "Sycamore Fig",
+    "aliases": [
+      "sycamore fig"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "tamarillo": {
+    "canonical_class": "tamarillo",
+    "display_name": "Tamarillo",
+    "aliases": [
+      "tamarillo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "tangelo": {
+    "canonical_class": "tangelo",
+    "display_name": "Tangelo",
+    "aliases": [
+      "tangelo"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "tanjong": {
+    "canonical_class": "tanjong",
+    "display_name": "Tanjong",
+    "aliases": [
+      "tanjong"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "taxus_baccata": {
+    "canonical_class": "taxus_baccata",
+    "display_name": "Taxus Baccata",
+    "aliases": [
+      "taxus baccata"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "tayberry": {
+    "canonical_class": "tayberry",
+    "display_name": "Tayberry",
+    "aliases": [
+      "tayberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "texas_persimmon": {
+    "canonical_class": "texas_persimmon",
+    "display_name": "Texas Persimmon",
+    "aliases": [
+      "texas persimmon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "thimbleberry": {
+    "canonical_class": "thimbleberry",
+    "display_name": "Thimbleberry",
+    "aliases": [
+      "thimbleberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "tomato": {
+    "canonical_class": "tomato",
+    "display_name": "Tomato",
+    "aliases": [
+      "Tomato 1",
+      "Tomato 10",
+      "Tomato 5",
+      "Tomato 7",
+      "Tomato 8",
+      "Tomato 9",
+      "Tomato Cherry Maroon 1",
+      "Tomato Cherry Orange 1",
+      "Tomato Cherry Red 2",
+      "Tomato Cherry Yellow 1",
+      "Tomato Maroon 2",
+      "tomato"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "toyon": {
+    "canonical_class": "toyon",
+    "display_name": "Toyon",
+    "aliases": [
+      "toyon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "ugli_fruit": {
+    "canonical_class": "ugli_fruit",
+    "display_name": "Ugli Fruit",
+    "aliases": [
+      "ugli fruit"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "vanilla": {
+    "canonical_class": "vanilla",
+    "display_name": "Vanilla",
+    "aliases": [
+      "vanilla"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "velvet_tamarind": {
+    "canonical_class": "velvet_tamarind",
+    "display_name": "Velvet Tamarind",
+    "aliases": [
+      "velvet tamarind"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "watermelon": {
+    "canonical_class": "watermelon",
+    "display_name": "Watermelon",
+    "aliases": [
+      "watermelon"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "complete"
+  },
+  "wax_gourd": {
+    "canonical_class": "wax_gourd",
+    "display_name": "Wax Gourd",
+    "aliases": [
+      "wax gourd"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "white_aspen": {
+    "canonical_class": "white_aspen",
+    "display_name": "White Aspen",
+    "aliases": [
+      "white aspen"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "white_currant": {
+    "canonical_class": "white_currant",
+    "display_name": "White Currant",
+    "aliases": [
+      "white currant"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "white_mulberry": {
+    "canonical_class": "white_mulberry",
+    "display_name": "White Mulberry",
+    "aliases": [
+      "white mulberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "white_sapote": {
+    "canonical_class": "white_sapote",
+    "display_name": "White Sapote",
+    "aliases": [
+      "white sapote"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "wineberry": {
+    "canonical_class": "wineberry",
+    "display_name": "Wineberry",
+    "aliases": [
+      "wineberry"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "wongi": {
+    "canonical_class": "wongi",
+    "display_name": "Wongi",
+    "aliases": [
+      "wongi"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "yali_pear": {
+    "canonical_class": "yali_pear",
+    "display_name": "Yali Pear",
+    "aliases": [
+      "yali pear"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "yellow_plum": {
+    "canonical_class": "yellow_plum",
+    "display_name": "Yellow Plum",
+    "aliases": [
+      "yellow plum"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "yuzu": {
+    "canonical_class": "yuzu",
+    "display_name": "Yuzu",
+    "aliases": [
+      "yuzu"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "zigzag_vine": {
+    "canonical_class": "zigzag_vine",
+    "display_name": "Zigzag Vine",
+    "aliases": [
+      "zigzag vine"
+    ],
+    "source_datasets": [
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "zucchini": {
+    "canonical_class": "zucchini",
+    "display_name": "Zucchini",
+    "aliases": [
+      "zucchini",
+      "zucchini_1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size",
+      "fruits262_full_original_v7"
+    ],
+    "knowledge_status": "partial"
+  },
+  "zucchini_dark": {
+    "canonical_class": "zucchini_dark",
+    "display_name": "Zucchini Dark",
+    "aliases": [
+      "Zucchini dark 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  },
+  "zucchini_green": {
+    "canonical_class": "zucchini_green",
+    "display_name": "Zucchini Green",
+    "aliases": [
+      "Zucchini Green 1"
+    ],
+    "source_datasets": [
+      "fruits-360-original-size"
+    ],
+    "knowledge_status": "partial"
+  }
+}
