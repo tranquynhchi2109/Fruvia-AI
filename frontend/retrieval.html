@@ -114,7 +114,7 @@
         <!-- Meta info bar -->
         <div id="results-header" class="results-header" style="display: none;">
           <div class="results-meta">
-            Tìm thấy <strong id="res-count">0</strong> kết quả trong <strong id="res-time">0</strong> ms
+            Hình ảnh tương đồng thuộc nhóm: <strong id="top-canonical-label">-</strong> (Tìm thấy <strong id="res-count">0</strong> kết quả trong <strong id="res-time">0</strong> ms)
           </div>
         </div>
 
@@ -135,43 +135,142 @@
     </div>
   </main>
 
-  <!-- Image Modal / Lightbox -->
+  <!-- Enterprise Fruit Knowledge Lightbox Modal -->
   <div id="image-modal" class="modal-overlay" style="display: none;" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div class="modal-content">
       <button type="button" id="modal-close" class="modal-close-btn" aria-label="Đóng cửa sổ xem ảnh">&times;</button>
       <div id="modal-body" class="modal-body">
-        <div class="modal-media-wrapper" id="modal-media-wrapper"></div>
-        <div class="modal-info">
-          <h2 id="modal-title" class="modal-title"></h2>
-          <p id="modal-original-class" class="modal-subtitle"></p>
-          <div id="modal-similarity-box" class="modal-similarity"></div>
 
-          <!-- Technical Payload Section -->
-          <div class="modal-meta-list" style="margin-bottom: 1.25rem;">
-            <div><strong>Tên file:</strong> <span id="modal-filename"></span></div>
-            <div><strong>Tập dữ liệu:</strong> <span id="modal-split"></span></div>
-            <div><strong>Đường dẫn:</strong> <span id="modal-path"></span></div>
-          </div>
+        <!-- Left Side: Result Image & Technical Identity Payload -->
+        <div class="modal-left-col">
+          <div class="modal-media-wrapper" id="modal-media-wrapper"></div>
 
-          <!-- Knowledge Base: Fruit Knowledge Card -->
-          <div id="modal-fruit-knowledge" class="fruit-knowledge-card">
-            <h3 class="knowledge-card-title">Thông tin & Công dụng Sinh học</h3>
-            <div class="knowledge-grid">
-              <div><strong>Tên khoa học:</strong> <span id="kb-sci-name">-</span></div>
-              <div><strong>Họ thực vật:</strong> <span id="kb-family">-</span></div>
-              <div><strong>Calo ước tính:</strong> <span id="kb-calories">-</span></div>
-              <div><strong>Nguồn gốc:</strong> <span id="kb-origin">-</span></div>
-            </div>
-            <div style="margin-top: 0.5rem;">
-              <strong>Vitamin & Dưỡng chất:</strong>
-              <p id="kb-vitamins" class="knowledge-desc">-</p>
-            </div>
-            <div style="margin-top: 0.5rem;">
-              <strong>Tác dụng cho sức khỏe:</strong>
-              <p id="kb-benefits" class="knowledge-desc">-</p>
-            </div>
+          <div class="modal-meta-list" style="margin-top: 1rem;">
+            <div style="font-weight: 700; color: var(--color-primary-hover); margin-bottom: 0.25rem;">Thông tin Nguồn Trích xuất:</div>
+            <div><strong>Nhãn gốc:</strong> <span id="modal-original-class">-</span></div>
+            <div><strong>Tập dữ liệu:</strong> <span id="modal-source-dataset">-</span></div>
+            <div><strong>Tên file:</strong> <span id="modal-filename">-</span></div>
+            <div><strong>Tập split:</strong> <span id="modal-split">-</span></div>
+            <div><strong>Đường dẫn:</strong> <span id="modal-path">-</span></div>
           </div>
         </div>
+
+        <!-- Right Side: Canonical Fruit Knowledge Base -->
+        <div class="modal-info">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
+            <h2 id="modal-title" class="modal-title">...</h2>
+            <span id="modal-canonical-badge" class="canonical-badge">canonical: -</span>
+          </div>
+          <p id="modal-scientific-name" class="modal-subtitle" style="font-style: italic; color: var(--color-text-muted);"></p>
+
+          <div id="modal-similarity-box" class="modal-similarity"></div>
+
+          <!-- Loading State Indicator -->
+          <div id="kb-loading-state" style="display: none; padding: 1.5rem; text-align: center; color: var(--color-text-muted);">
+            <div class="spinner" style="margin: 0 auto 0.5rem auto;"></div>
+            <p>Đang tải thông tin chi tiết trái cây từ Knowledge Base...</p>
+          </div>
+
+          <!-- Error State Indicator -->
+          <div id="kb-error-state" style="display: none; padding: 1rem; background-color: var(--color-warning-bg); border: 1px solid var(--color-warning-border); border-radius: var(--radius-md); color: #92400e; margin-top: 1rem;">
+            <p id="kb-error-message">Không thể tải thông tin chi tiết. Bạn vẫn có thể xem thông tin kỹ thuật của kết quả ở bên trái.</p>
+          </div>
+
+          <!-- Enterprise Knowledge Base Accordion / Cards Container -->
+          <div id="modal-fruit-knowledge" class="fruit-knowledge-container" style="margin-top: 1rem;">
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Tổng quan & Phân loại</h3>
+              <p id="kb-description" class="kb-text">-</p>
+              <div class="kb-grid-2col" style="margin-top: 0.5rem;">
+                <div><strong>Họ thực vật:</strong> <span id="kb-family">-</span></div>
+                <div><strong>Nguồn gốc:</strong> <span id="kb-origin">-</span></div>
+                <div><strong>Mùa vụ:</strong> <span id="kb-season">-</span></div>
+                <div><strong>Phân bố:</strong> <span id="kb-distribution">-</span></div>
+              </div>
+            </section>
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Đặc điểm & Hương vị</h3>
+              <div class="kb-grid-2col">
+                <div><strong>Màu sắc:</strong> <span id="kb-color">-</span></div>
+                <div><strong>Hình dạng:</strong> <span id="kb-shape">-</span></div>
+                <div><strong>Vỏ:</strong> <span id="kb-peel">-</span></div>
+                <div><strong>Thịt quả:</strong> <span id="kb-flesh">-</span></div>
+                <div><strong>Vị:</strong> <span id="kb-taste">-</span></div>
+                <div><strong>Kết cấu:</strong> <span id="kb-texture">-</span></div>
+              </div>
+            </section>
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Giá trị Dinh dưỡng / 100g</h3>
+              <div class="nutrition-badge-grid">
+                <div class="nutri-item"><span class="nutri-val" id="nutri-calories">-</span><span class="nutri-lbl">Năng lượng</span></div>
+                <div class="nutri-item"><span class="nutri-val" id="nutri-water">-</span><span class="nutri-lbl">Nước (g)</span></div>
+                <div class="nutri-item"><span class="nutri-val" id="nutri-carbs">-</span><span class="nutri-lbl">Carbs (g)</span></div>
+                <div class="nutri-item"><span class="nutri-val" id="nutri-sugars">-</span><span class="nutri-lbl">Đường (g)</span></div>
+                <div class="nutri-item"><span class="nutri-val" id="nutri-fiber">-</span><span class="nutri-lbl">Chất xơ (g)</span></div>
+                <div class="nutri-item"><span class="nutri-val" id="nutri-protein">-</span><span class="nutri-lbl">Protein (g)</span></div>
+              </div>
+            </section>
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Vitamin, Khoáng chất & Hợp chất</h3>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Vitamin nổi bật:</strong>
+                <ul id="kb-vitamins-list" class="kb-list"></ul>
+              </div>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Khoáng chất:</strong>
+                <ul id="kb-minerals-list" class="kb-list"></ul>
+              </div>
+              <div>
+                <strong>Hợp chất sinh học:</strong>
+                <ul id="kb-compounds-list" class="kb-list"></ul>
+              </div>
+            </section>
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Lợi ích Dinh dưỡng & Sử dụng</h3>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Giá trị hỗ trợ sức khỏe:</strong>
+                <ul id="kb-benefits-list" class="kb-list"></ul>
+              </div>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Chế biến & Ẩm thực:</strong>
+                <ul id="kb-culinary-list" class="kb-list"></ul>
+              </div>
+            </section>
+
+            <section class="kb-section">
+              <h3 class="kb-heading">Hướng dẫn Chọn & Bảo quản</h3>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Mẹo chọn quả ngon:</strong>
+                <ul id="kb-choose-list" class="kb-list"></ul>
+              </div>
+              <div style="margin-bottom: 0.5rem;">
+                <strong>Bảo quản:</strong>
+                <ul id="kb-storage-list" class="kb-list"></ul>
+              </div>
+              <div>
+                <strong>Giống phổ biến:</strong>
+                <span id="kb-varieties">-</span>
+              </div>
+            </section>
+
+            <section class="kb-section" id="kb-cautions-wrapper" style="background-color: var(--color-warning-bg); border-color: var(--color-warning-border);">
+              <h3 class="kb-heading" style="color: #92400e;">Lưu ý Khuyến cáo</h3>
+              <ul id="kb-cautions-list" class="kb-list" style="color: #92400e;"></ul>
+            </section>
+
+            <section class="kb-section" style="font-size: 0.75rem; color: var(--color-text-subtle);">
+              <strong>Nguồn tham khảo:</strong>
+              <div id="kb-sources-list" style="margin-top: 0.25rem;"></div>
+            </section>
+
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -185,7 +284,6 @@
   <script src="js/config.js"></script>
   <script src="js/api.js"></script>
   <script src="js/utils.js"></script>
-  <script src="js/fruit_data.js"></script>
   <script src="js/retrieval.js"></script>
 </body>
 </html>

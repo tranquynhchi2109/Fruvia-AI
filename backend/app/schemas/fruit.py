@@ -1,36 +1,69 @@
 """
-Pydantic schemas for fruit metadata endpoints.
+Pydantic schemas for Fruit Knowledge Base.
 """
 
 from __future__ import annotations
 
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 
-class FruitClassInfo(BaseModel):
-    """Metadata about a single fruit class."""
-
-    class_name: str = Field(..., description="Normalized class name")
-    original_classes: list[str] = Field(
-        default_factory=list,
-        description="Original Fruits-360 class names mapped to this class",
-    )
-    sample_count: int | None = Field(None, description="Number of images in gallery")
+class FruitNames(BaseModel):
+    vi: str
+    en: str
 
 
-class FruitListResponse(BaseModel):
-    """Response body for GET /api/fruits."""
-
-    classes: list[str] = Field(..., description="All available fruit class names")
-    total: int = Field(..., description="Total number of classes")
+class FruitFamily(BaseModel):
+    scientific: str
+    vi: str
 
 
-class FruitDetailResponse(BaseModel):
-    """Response body for GET /api/fruits/{class_name}."""
+class FruitAppearance(BaseModel):
+    color: list[str] = Field(default_factory=list)
+    shape: str = ""
+    size: str = ""
+    peel: str = ""
+    flesh: str = ""
 
-    class_name: str
-    original_classes: list[str] = Field(default_factory=list)
-    sample_count: int | None = None
-    in_classifier: bool = Field(
-        ..., description="Whether this class is in the classification model"
-    )
+
+class NutritionPer100g(BaseModel):
+    calories_kcal: float | int = 0
+    water_g: float | int = 0
+    protein_g: float | int = 0
+    carbohydrates_g: float | int = 0
+    sugars_g: float | int = 0
+    fiber_g: float | int = 0
+    fat_g: float | int = 0
+
+
+class FruitSource(BaseModel):
+    title: str
+    url: str
+
+
+class FruitKnowledge(BaseModel):
+    """Full detail schema for a canonical fruit species."""
+
+    canonical_class: str
+    names: FruitNames
+    scientific_name: str
+    family: FruitFamily
+    description: str = ""
+    origin: str = ""
+    distribution: str = ""
+    appearance: FruitAppearance = Field(default_factory=FruitAppearance)
+    taste: str = ""
+    texture: str = ""
+    season: str = ""
+    nutrition_per_100g: NutritionPer100g = Field(default_factory=NutritionPer100g)
+    vitamins: list[str] = Field(default_factory=list)
+    minerals: list[str] = Field(default_factory=list)
+    key_compounds: list[str] = Field(default_factory=list)
+    potential_health_benefits: list[str] = Field(default_factory=list)
+    culinary_uses: list[str] = Field(default_factory=list)
+    how_to_choose: list[str] = Field(default_factory=list)
+    storage: list[str] = Field(default_factory=list)
+    common_varieties: list[str] = Field(default_factory=list)
+    cautions: list[str] = Field(default_factory=list)
+    sources: list[FruitSource] = Field(default_factory=list)

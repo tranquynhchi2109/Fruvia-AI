@@ -76,7 +76,9 @@ COMMON_FRUIT_GROUPS = [
 
 
 def resolve_class_names(
-    original_class: str, class_mapping: dict[str, str] | None = None
+    original_class: str,
+    class_mapping: dict[str, str] | None = None,
+    source_dataset: str | None = None,
 ) -> tuple[str, str]:
     """
     Resolve raw original_class label into a tuple of (canonical_class, display_name).
@@ -88,19 +90,14 @@ def resolve_class_names(
     4. Strip numbers/varieties to match common fruit groups.
     5. Fallback: normalized slug for canonical_class, Title Case for display_name.
 
-    Examples:
-    - "apple_red_2" -> ("apple", "Apple")
-    - "Apple Golden 1" -> ("apple", "Apple")
-    - "pear_13" -> ("pear", "Pear")
-    - "papaya_2" -> ("papaya", "Papaya")
-    - "dragon_fruit" -> ("dragon_fruit", "Dragon Fruit")
-
     Parameters
     ----------
     original_class : str
         Raw label string from Qdrant or dataset.
     class_mapping : dict[str, str] | None
         Loaded dictionary mapping original labels to target classes.
+    source_dataset : str | None
+        Optional dataset source name for logging or custom dataset rules.
 
     Returns
     -------

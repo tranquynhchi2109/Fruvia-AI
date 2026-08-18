@@ -16,15 +16,19 @@ class QueryInfo(BaseModel):
 class RetrievalResult(BaseModel):
     """A single retrieval result from vector database."""
 
-    original_class: str = Field(..., description="Original Fruits-360 class name")
+    original_class: str = Field(..., description="Original dataset class name")
     canonical_class: str = Field(..., description="Canonical fruit class name (e.g. apple, papaya)")
     display_name: str = Field(
         ..., description="Human-friendly display name (e.g. Apple, Dragon Fruit)"
     )
+    source_dataset: str = Field(
+        default="fruits-360-original-size",
+        description="Source dataset name (e.g. fruits-360-original-size, fruits262_full_original_v7)",
+    )
     filename: str = Field(..., description="Filename of the matched image")
     relative_path: str = Field(..., description="Relative path of the matched image")
     original_split: str = Field(
-        ..., description="Dataset split of the matched image (e.g. train, test)"
+        ..., description="Dataset split of the matched image (e.g. train, test, gallery)"
     )
     similarity: float = Field(
         ..., ge=-1.0, le=1.0, description="Cosine similarity score (-1.0 to 1.0)"

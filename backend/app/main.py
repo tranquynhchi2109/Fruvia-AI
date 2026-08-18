@@ -63,7 +63,7 @@ def create_app() -> FastAPI:
 
     app = FastAPI(
         title="Fruvia AI",
-        description="AI-powered fruit image similarity retrieval system using DINOv2 embeddings and Qdrant vector search",
+        description="AI-powered fruit image similarity retrieval system using DINOv2 embeddings, Qdrant vector search, and Canonical Fruit Knowledge Base",
         version=settings.app_version,
         docs_url="/docs" if not settings.is_production else None,
         redoc_url="/redoc" if not settings.is_production else None,
@@ -87,11 +87,13 @@ def create_app() -> FastAPI:
     app.add_exception_handler(Exception, generic_error_handler)  # type: ignore[arg-type]
 
     # --- Routes ---
+    from app.api.routes_fruits import router as fruits_router
     from app.api.routes_health import router as health_router
     from app.api.routes_retrieval import router as retrieval_router
 
     app.include_router(health_router, prefix="/api")
     app.include_router(retrieval_router, prefix="/api")
+    app.include_router(fruits_router, prefix="/api")
 
     return app
 

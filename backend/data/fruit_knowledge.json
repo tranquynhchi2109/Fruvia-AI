@@ -1,0 +1,1493 @@
+{
+  "apple": {
+    "canonical_class": "apple",
+    "names": {
+      "vi": "Táo",
+      "en": "Apple"
+    },
+    "scientific_name": "Malus domestica",
+    "family": {
+      "scientific": "Rosaceae",
+      "vi": "Họ Hoa hồng"
+    },
+    "description": "Táo là một trong những loại trái cây phổ biến nhất trên thế giới, nổi tiếng với độ giòn ngọt, hương thơm tự nhiên và giá trị dinh dưỡng cao.",
+    "origin": "Trung Á (khu vực Kazakhstan ngày nay)",
+    "distribution": "Được trồng rộng rãi ở các vùng khí hậu ôn đới như Bắc Mỹ, Châu Âu, Trung Quốc và New Zealand.",
+    "appearance": {
+      "color": ["Đỏ", "Xanh lá", "Vàng"],
+      "shape": "Hình tròn hơi thon ở đáy",
+      "size": "Đường kính từ 6 - 9 cm",
+      "peel": "Vỏ mỏng, nhẵn bóng, chứa nhiều chất chống oxy hóa",
+      "flesh": "Thịt quả màu trắng kem, giòn mọng nước"
+    },
+    "taste": "Ngọt thanh hoặc chua nhẹ tùy thuộc vào giống táo",
+    "texture": "Giòn mọng nước",
+    "season": "Thu hoạch chính từ tháng 8 đến tháng 11",
+    "nutrition_per_100g": {
+      "calories_kcal": 52,
+      "water_g": 85.6,
+      "protein_g": 0.3,
+      "carbohydrates_g": 13.8,
+      "sugars_g": 10.4,
+      "fiber_g": 2.4,
+      "fat_g": 0.2
+    },
+    "vitamins": [
+      "Vitamin C (4.6 mg - khoảng 8% DV)",
+      "Vitamin B6 (0.041 mg)",
+      "Vitamin K (2.2 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (107 mg)",
+      "Canxi / Calcium (6 mg)",
+      "Magie / Magnesium (5 mg)"
+    ],
+    "key_compounds": [
+      "Quercetin (Flavonoid chống viêm)",
+      "Pectin (Chất xơ hòa tan)",
+      "Axit Chlorogenic"
+    ],
+    "potential_health_benefits": [
+      "Có thể hỗ trợ sức khỏe tim mạch nhờ chất xơ Pectin và Polyphenol",
+      "Hỗ trợ kiểm soát chỉ số đường huyết và tạo cảm giác no lâu",
+      "Cung cấp chất chống oxy hóa bảo vệ tế bào khỏi gốc tự do"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp hoặc làm nộm, salad trái cây",
+      "Ép lấy nước táo tươi hoặc chế biến sinh tố",
+      "Nướng làm bánh táo (Apple Pie), làm mứt hoặc nước sốt táo"
+    ],
+    "how_to_choose": [
+      "Chọn quả rắn chắc, mướt vỏ, không có vết dập nát",
+      "Cầm cảm giác nặng tay so với kích thước",
+      "Phần cuống còn tươi xanh"
+    ],
+    "storage": [
+      "Bảo quản nhiệt độ phòng từ 3 - 5 ngày",
+      "Bảo quản trong tủ lạnh (1 - 4°C) giúp giữ độ giòn từ 4 - 6 tuần"
+    ],
+    "common_varieties": [
+      "Fuji",
+      "Gala",
+      "Granny Smith",
+      "Honeycrisp",
+      "Red Delicious"
+    ],
+    "cautions": [
+      "Hạt táo có chứa hợp chất amygdalin, không nên ăn số lượng lớn hạt"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Apples, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "avocado": {
+    "canonical_class": "avocado",
+    "names": {
+      "vi": "Bơ",
+      "en": "Avocado"
+    },
+    "scientific_name": "Persea americana",
+    "family": {
+      "scientific": "Lauraceae",
+      "vi": "Họ Nguyệt quế"
+    },
+    "description": "Bơ là loại trái cây độc đáo có hàm lượng chất béo không bão hòa đơn cao, kết cấu dẻo mịn như bơ thực vật và chứa rất nhiều chất dinh dưỡng thiết yếu.",
+    "origin": "Mexico và khu vực Trung Mỹ",
+    "distribution": "Trồng nhiều ở Mexico, Peru, Colombia, Mỹ (California) và Tây Nguyên Việt Nam.",
+    "appearance": {
+      "color": ["Xanh thẫm", "Tím sẫm khi chín"],
+      "shape": "Hình quả lê hoặc hình tròn",
+      "size": "Đường kính 7 - 12 cm, nặng từ 150 - 500g",
+      "peel": "Vỏ nhám hoặc sần sùi",
+      "flesh": "Thịt quả màu xanh vàng dẻo quánh, hạt to ở giữa"
+    },
+    "taste": "Béo bùi, ngậy dịu, thơm nhẹ",
+    "texture": "Mềm dẻo, mịn màng",
+    "season": "Từ tháng 4 đến tháng 9 hàng năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 160,
+      "water_g": 73.2,
+      "protein_g": 2.0,
+      "carbohydrates_g": 8.5,
+      "sugars_g": 0.7,
+      "fiber_g": 6.7,
+      "fat_g": 14.7
+    },
+    "vitamins": [
+      "Vitamin K (21 mcg - khoảng 18% DV)",
+      "Folate / Vitamin B9 (81 mcg)",
+      "Vitamin E (2.07 mg)",
+      "Vitamin C (10 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (485 mg - cao hơn chuối)",
+      "Magie / Magnesium (29 mg)",
+      "Đồng / Copper (0.19 mg)"
+    ],
+    "key_compounds": [
+      "Axit Oleic (Chất béo không bão hòa đơn có lợi)",
+      "Lutein và Zeaxanthin (Tốt cho thị giác)",
+      "Beta-sitosterol"
+    ],
+    "potential_health_benefits": [
+      "Hỗ trợ duy trì chỉ số cholesterol lành mạnh cho tim mạch",
+      "Cung cấp Lutein bảo vệ sức khỏe đôi mắt",
+      "Hỗ trợ hấp thu tốt hơn các vitamin tan trong dầu (A, D, E, K)"
+    ],
+    "culinary_uses": [
+      "Làm món Guacamole chuẩn phong cách Mexico",
+      "Xay sinh tố bơ, làm kem bơ hoặc ăn kèm bánh mì sốt bơ trứng",
+      "Cắt lát trộn salad hoặc làm nhân sushi"
+    ],
+    "how_to_choose": [
+      "Nhấn nhẹ thấy hơi mềm đều tay là bơ đã chín tới",
+      "Bật nhẹ phần cuống, nếu màu vàng xanh là bơ chuẩn ngon",
+      "Tránh quả có cuống màu nâu sẫm (đã quá chín hoặc hỏng)"
+    ],
+    "storage": [
+      "Bơ xanh để nhiệt độ phòng cùng túi giấy để chín tự nhiên",
+      "Bơ chín bảo quản ngăn mát tủ lạnh từ 3 - 5 ngày"
+    ],
+    "common_varieties": [
+      "Hass",
+      "Bơ 034 (Việt Nam)",
+      "Bơ Booth",
+      "Fuerte"
+    ],
+    "cautions": [
+      "Hàm lượng calo khá cao nên cần cân đối khẩu phần nếu đang giảm cân"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Avocados, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "banana": {
+    "canonical_class": "banana",
+    "names": {
+      "vi": "Chuối",
+      "en": "Banana"
+    },
+    "scientific_name": "Musa acuminata",
+    "family": {
+      "scientific": "Musaceae",
+      "vi": "Họ Chuối"
+    },
+    "description": "Chuối là loại trái cây nhiệt đới giàu năng lượng, cung cấp lượng Kali phong phú và các chất xơ tự nhiên hỗ trợ tiêu hóa nhanh chóng.",
+    "origin": "Đông Nam Á và Úc",
+    "distribution": "Trồng phổ biến khắp các nước nhiệt đới và bán nhiệt đới trên thế giới.",
+    "appearance": {
+      "color": ["Vàng tươi khi chín", "Xanh khi còn sống"],
+      "shape": "Hình thon dài hơi cong",
+      "size": "Chiều dài 12 - 20 cm",
+      "peel": "Vỏ mỏng dễ bóc",
+      "flesh": "Thịt quả dẻo mịn màu trắng ngà hoặc vàng nhạt"
+    },
+    "taste": "Ngọt đậm, thơm dịu đặc trưng",
+    "texture": "Mềm dẻo",
+    "season": "Thu hoạch quanh năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 89,
+      "water_g": 74.9,
+      "protein_g": 1.1,
+      "carbohydrates_g": 22.8,
+      "sugars_g": 12.2,
+      "fiber_g": 2.6,
+      "fat_g": 0.3
+    },
+    "vitamins": [
+      "Vitamin B6 (0.37 mg - khoảng 28% DV)",
+      "Vitamin C (8.7 mg)",
+      "Vitamin A (64 IU)"
+    ],
+    "minerals": [
+      "Kali / Potassium (358 mg)",
+      "Magie / Magnesium (27 mg)",
+      "Mangan / Manganese (0.27 mg)"
+    ],
+    "key_compounds": [
+      "Dopamine tự nhiên",
+      "Catechin (Antioxidant)",
+      "Tinh bột kháng (Resistant Starch ở chuối xanh)"
+    ],
+    "potential_health_benefits": [
+      "Hỗ trợ bổ sung năng lượng nhanh chóng cho người tập luyện thể thao",
+      "Hàm lượng Kali hỗ trợ điều hòa huyết áp và chức năng cơ bắp",
+      "Chứa prebiotic hỗ trợ lợi khuẩn đường ruột"
+    ],
+    "culinary_uses": [
+      "Ăn tươi trực tiếp",
+      "Làm bánh chuối, chè chuối, sinh tố chuối kết hợp bơ đậu phụng",
+      "Sấy khô làm món snack chuối giòn"
+    ],
+    "how_to_choose": [
+      "Chọn nải chuối chín vàng tự nhiên, có chấm đồi mồi nhỏ (chuối trứng cút) là ngọt nhất",
+      "Tránh quả dập nát hoặc vỏ thâm đen toàn bộ"
+    ],
+    "storage": [
+      "Treo nơi thoáng mát nhiệt độ phòng",
+      "Không nên để tủ lạnh khi chuối chưa chín vì dễ làm thâm vỏ"
+    ],
+    "common_varieties": [
+      "Chuối Tiêu",
+      "Chuối Sứ / Chuối Xiêm",
+      "Chuối Laba",
+      "Cavendish"
+    ],
+    "cautions": [
+      "Người mắc bệnh thận nặng nên tham khảo ý kiến bác sĩ khi nạp nhiều Kali"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Bananas, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "cherry": {
+    "canonical_class": "cherry",
+    "names": {
+      "vi": "Anh đào / Cherry",
+      "en": "Cherry"
+    },
+    "scientific_name": "Prunus avium",
+    "family": {
+      "scientific": "Rosaceae",
+      "vi": "Họ Hoa hồng"
+    },
+    "description": "Cherry là loại quả mọng cao cấp có màu đỏ mọng quyến rũ, vị ngọt chua hài hòa và chứa hàm lượng hợp chất chống oxy hóa Anthocyanin cao.",
+    "origin": "Khu vực giữa Biển Đen và Biển Caspian (Tây Á & Đông Châu Âu)",
+    "distribution": "Trồng nhiều ở Mỹ, Chile, Thổ Nhĩ Kỳ, Úc và Canada.",
+    "appearance": {
+      "color": ["Đỏ tươi", "Đỏ thẫm", "Vàng đỏ (Rainier)"],
+      "shape": "Hình tròn tim nhỏ",
+      "size": "Đường kính 1.5 - 3 cm",
+      "peel": "Vỏ căng bóng, mỏng mịn",
+      "flesh": "Thịt quả mọng nước bao quanh hạt cứng"
+    },
+    "taste": "Ngọt đậm hoặc chua ngọt tùy dòng Cherry",
+    "texture": "Giòn mọng nước",
+    "season": "Tháng 5 - 8 (Bắc bán cầu), Tháng 11 - 2 (Nam bán cầu)",
+    "nutrition_per_100g": {
+      "calories_kcal": 63,
+      "water_g": 82.2,
+      "protein_g": 1.1,
+      "carbohydrates_g": 16.0,
+      "sugars_g": 12.8,
+      "fiber_g": 2.1,
+      "fat_g": 0.2
+    },
+    "vitamins": [
+      "Vitamin C (7.0 mg)",
+      "Vitamin A (64 IU)",
+      "Vitamin K (2.1 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (222 mg)",
+      "Canxi / Calcium (13 mg)",
+      "Magie / Magnesium (11 mg)"
+    ],
+    "key_compounds": [
+      "Anthocyanins (Sắc tố chống oxy hóa màu đỏ)",
+      "Melatonin tự nhiên (Hỗ trợ nhịp sinh học)",
+      "Axit Cyanidin"
+    ],
+    "potential_health_benefits": [
+      "Hỗ trợ giảm viêm và giảm nồng độ axit uric ở người bị gút",
+      "Chứa chất chống oxy hóa polyphenol bảo vệ tế bào",
+      "Nguồn melatonin tự nhiên có thể hỗ trợ giấc ngủ ngon"
+    ],
+    "culinary_uses": [
+      "Ăn tươi nguyên quả",
+      "Làm nhân bánh tart, pastry hoặc mứt cherry",
+      "Pha chế cocktail, siro hoặc sinh tố"
+    ],
+    "how_to_choose": [
+      "Chọn quả có vỏ căng mọng, màu đỏ thẫm bóng",
+      "Cuống quả phải còn tươi xanh và dính chặt vào thân quả"
+    ],
+    "storage": [
+      "Bảo quản ngăn mát tủ lạnh từ 0 - 4°C",
+      "Không rửa nước trước khi cất tủ lạnh để tránh bị ủng"
+    ],
+    "common_varieties": [
+      "Bing Cherry",
+      "Rainier Cherry (Vàng ửng đỏ)",
+      "Sweetheart",
+      "Lapins"
+    ],
+    "cautions": [
+      "Hạt cherry có chứa glycoside cyanogenic, không được nhai vỡ hạt số lượng lớn"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Cherries, sweet, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "grape": {
+    "canonical_class": "grape",
+    "names": {
+      "vi": "Nho",
+      "en": "Grape"
+    },
+    "scientific_name": "Vitis vinifera",
+    "family": {
+      "scientific": "Vitaceae",
+      "vi": "Họ Nho"
+    },
+    "description": "Nho là loại trái cây mọc thành chùm giàu dưỡng chất, nổi tiếng với hợp chất Resveratrol chống oxy hóa mạnh mẽ và được sử dụng rộng rãi trong ẩm thực lẫn công nghiệp vang.",
+    "origin": "Khu vực Địa Trung Hải và Trung Đông",
+    "distribution": "Trồng khắp thế giới như Mỹ, Ý, Pháp, Tây Ban Nha, Chile, Nam Phi và Việt Nam (Ninh Thuận).",
+    "appearance": {
+      "color": ["Xanh lá", "Tím thẫm", "Đỏ hồng"],
+      "shape": "Hình cầu hoặc oval thon",
+      "size": "Đường kính 1 - 2.5 cm",
+      "peel": "Vỏ mỏng căng, có lớp phấn tự nhiên bên ngoài",
+      "flesh": "Thịt quả mọng nước, có hạt hoặc không hạt"
+    },
+    "taste": "Ngọt thanh mọng nước, chua nhẹ ở vỏ",
+    "texture": "Giòn mọng hoặc dẻo mềm",
+    "season": "Từ tháng 8 đến tháng 11 hàng năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 69,
+      "water_g": 80.5,
+      "protein_g": 0.7,
+      "carbohydrates_g": 18.1,
+      "sugars_g": 15.5,
+      "fiber_g": 0.9,
+      "fat_g": 0.2
+    },
+    "vitamins": [
+      "Vitamin K (14.6 mcg - khoảng 12% DV)",
+      "Vitamin C (3.2 mg)",
+      "Vitamin B2 / Riboflavin (0.07 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (191 mg)",
+      "Đồng / Copper (0.13 mg)",
+      "Mangan / Manganese (0.07 mg)"
+    ],
+    "key_compounds": [
+      "Resveratrol (Chống oxy hóa ở vỏ nho đỏ)",
+      "Quercetin",
+      "Proanthocyanidins"
+    ],
+    "potential_health_benefits": [
+      "Resveratrol có thể hỗ trợ bảo vệ mạch máu và sức khỏe tim mạch",
+      "Giúp tăng cường hệ miễn dịch và bảo vệ thị lực",
+      "Cung cấp polyphenol có lợi cho tế bào da"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp làm món tráng miệng",
+      "Sản xuất ủ rượu vang cao cấp",
+      "Làm nho khô, mứt nho hoặc thành phần salad"
+    ],
+    "how_to_choose": [
+      "Chùm nho còn nguyên vẹn, trái mọng cứng không bị dập",
+      "Có bọc lớp phấn trắng tự nhiên quanh quả",
+      "Cuống chùm nho còn tươi xanh không bị khô héo"
+    ],
+    "storage": [
+      "Bảo quản tủ lạnh từ 2 - 4°C giúp nho tươi từ 1 - 2 tuần",
+      "Rửa sạch ngay trước khi ăn"
+    ],
+    "common_varieties": [
+      "Nho Mẫu Đơn (Shine Muscat)",
+      "Nho Móng Tay",
+      "Nho Đỏ Không Hạt",
+      "Nho Ninh Thuận"
+    ],
+    "cautions": [
+      "Chứa lượng đường tự nhiên tương đối cao, người tiểu đường nên ăn kiểm soát"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Grapes, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "guava": {
+    "canonical_class": "guava",
+    "names": {
+      "vi": "Ổi",
+      "en": "Guava"
+    },
+    "scientific_name": "Psidium guajava",
+    "family": {
+      "scientific": "Myrtaceae",
+      "vi": "Họ Sim"
+    },
+    "description": "Ổi là loại trái cây nhiệt đới có hàm lượng Vitamin C cực kỳ cao (gấp khoảng 4 lần cam), giàu chất xơ và hương thơm ngào ngạt.",
+    "origin": "Mỹ La-tinh và khu vực Caribe",
+    "distribution": "Trồng phổ biến ở Đông Nam Á (Việt Nam, Thái Lan, Ấn Độ) và các nước nhiệt đới.",
+    "appearance": {
+      "color": ["Xanh nhạt khi giòn", "Vàng ửng khi chín"],
+      "shape": "Hình tròn hoặc hình quả lê",
+      "size": "Đường kính 5 - 10 cm",
+      "peel": "Vỏ mỏng hơi sần sùi nhẹ",
+      "flesh": "Ruột ruột trắng hoặc hồng phớt, chứa nhiều hạt nhỏ ở tâm"
+    },
+    "taste": "Chua ngọt hài hòa, giòn xốp",
+    "texture": "Giòn cứng khi ươm, mềm mọng khi chín",
+    "season": "Cho trái quanh năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 68,
+      "water_g": 80.8,
+      "protein_g": 2.6,
+      "carbohydrates_g": 14.3,
+      "sugars_g": 8.9,
+      "fiber_g": 5.4,
+      "fat_g": 1.0
+    },
+    "vitamins": [
+      "Vitamin C (228.3 mg - gấp hơn 250% DV)",
+      "Vitamin A (624 IU)",
+      "Folate / Vitamin B9 (49 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (417 mg)",
+      "Magie / Magnesium (22 mg)",
+      "Canxi / Calcium (18 mg)"
+    ],
+    "key_compounds": [
+      "Lycopene (Có nhiều trong ổi ruột hồng)",
+      "Axit Ascorbic",
+      "Quercetin"
+    ],
+    "potential_health_benefits": [
+      "Cung cấp nồng độ Vitamin C vượt trội hỗ trợ sức đề kháng mạnh mẽ",
+      "Giàu chất xơ hòa tan giúp hỗ trợ tiêu hóa và giảm cân",
+      "Lycopene hỗ trợ ngăn ngừa tác động của tế bào tự do"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp chấm muối ớt",
+      "Ép lấy nước ổi nguyên chất",
+      "Làm mứt ổi hoặc gỏi ổi tai heo"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ màu xanh sáng hơi ngả vàng nhẹ",
+      "Thân quả chắc tay, tỏa hương thơm tự nhiên"
+    ],
+    "storage": [
+      "Ổi xanh giữ nhiệt độ phòng 2 - 3 ngày để mềm dần",
+      "Bảo quản tủ lạnh từ 5 - 7 ngày"
+    ],
+    "common_varieties": [
+      "Ổi Nữ Hoàng",
+      "Ổi Xá Lị",
+      "Ổi Ruột Hồng",
+      "Ổi Đào"
+    ],
+    "cautions": [
+      "Hạt ổi cứng nên nhai kỹ hoặc tránh ăn nhiều hạt nếu có vấn đề dạ dày"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Guavas, common, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "kiwi": {
+    "canonical_class": "kiwi",
+    "names": {
+      "vi": "Kiwi",
+      "en": "Kiwifruit / Kiwi"
+    },
+    "scientific_name": "Actinidia deliciosa",
+    "family": {
+      "scientific": "Actinidiaceae",
+      "vi": "Họ Dương đào"
+    },
+    "description": "Kiwi là loại quả mọng có vỏ lông mịn đặc trưng, ruột xanh hoặc vàng tươi rực rỡ, vị chua ngọt đậm đà và giàu enzyme hỗ trợ tiêu hóa.",
+    "origin": "Miền Trung và Miền Đông Trung Quốc",
+    "distribution": "Trồng nổi tiếng tại New Zealand, Ý, Chile và Trung Quốc.",
+    "appearance": {
+      "color": ["Vỏ nâu vỏ lông", "Ruột xanh ngọc hoặc vàng kim"],
+      "shape": "Hình oval hình trụ nhỏ",
+      "size": "Chiều dài 5 - 8 cm",
+      "peel": "Vỏ thô nhám phủ lớp lông mịn",
+      "flesh": "Thịt quả mịn mọng nước chứa các hạt đen nhỏ xếp mảng tròn"
+    },
+    "taste": "Chua ngọt thanh mát",
+    "texture": "Mềm dẻo mọng nước",
+    "season": "Tháng 3 - 11 (New Zealand), Tháng 10 - 5 (Bắc bán cầu)",
+    "nutrition_per_100g": {
+      "calories_kcal": 61,
+      "water_g": 83.1,
+      "protein_g": 1.1,
+      "carbohydrates_g": 14.7,
+      "sugars_g": 9.0,
+      "fiber_g": 3.0,
+      "fat_g": 0.5
+    },
+    "vitamins": [
+      "Vitamin C (92.7 mg - hơn 100% DV)",
+      "Vitamin K (40.3 mcg)",
+      "Vitamin E (1.46 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (312 mg)",
+      "Canxi / Calcium (34 mg)",
+      "Magie / Magnesium (17 mg)"
+    ],
+    "key_compounds": [
+      "Enzyme Actinidin (Hỗ trợ phân giải protein)",
+      "Lutein",
+      "Carotenoids"
+    ],
+    "potential_health_benefits": [
+      "Enzyme Actinidin hỗ trợ dạ dày tiêu hóa protein tốt hơn",
+      "Cung cấp hàm lượng Vitamin C dồi dào tăng sức đề kháng",
+      "Hỗ trợ chất lượng giấc ngủ và làm mượt làn da"
+    ],
+    "culinary_uses": [
+      "Bổ đôi xúc ăn bằng thìa hoặc gọt vỏ ăn tươi",
+      "Làm mứt kiwi, trang trí kem bánh sinh nhật",
+      "Xay sinh tố detox"
+    ],
+    "how_to_choose": [
+      "Chọn quả cầm cảm giác êm tay khi nắn nhẹ",
+      "Vỏ không bị nhăn nheo dập móp"
+    ],
+    "storage": [
+      "Giữ ở nhiệt độ phòng đến khi mềm tay",
+      "Sau khi chín cất tủ lạnh giữ được 1 - 2 tuần"
+    ],
+    "common_varieties": [
+      "Kiwi Xanh (Green Hayward)",
+      "Kiwi Vàng (Gold SunGold)",
+      "Kiwi Đỏ"
+    ],
+    "cautions": [
+      "Enzyme Actinidin có thể gây dị ứng nhẹ ở một số người nhạy cảm"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Kiwifruit, green, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "lemon": {
+    "canonical_class": "lemon",
+    "names": {
+      "vi": "Chanh vàng / Chanh",
+      "en": "Lemon"
+    },
+    "scientific_name": "Citrus limon",
+    "family": {
+      "scientific": "Rutaceae",
+      "vi": "Họ Cam chanh"
+    },
+    "description": "Chanh là loại quả giàu Axit Citric và Vitamin C, có vị chua gắt đặc trưng, được ứng dụng vô cùng rộng rãi trong ẩm thực, giải khát và đời sống.",
+    "origin": "Khu vực Nam Á (Ấn Độ, Miến Điện)",
+    "distribution": "Trồng rộng khắp Ấn Độ, Argentina, Tây Ban Nha, Mỹ và Việt Nam.",
+    "appearance": {
+      "color": ["Vàng tươi khi chín", "Xanh mướt"],
+      "shape": "Hình oval có núm nhỏ ở hai đầu",
+      "size": "Đường kính 5 - 8 cm",
+      "peel": "Vỏ chứa nhiều túi tinh dầu thơm phức",
+      "flesh": "Thịt quả chia thành các múi mọng nước chua"
+    },
+    "taste": "Chua đậm, thơm nồng tinh dầu",
+    "texture": "Mọng nước",
+    "season": "Cho thu hoạch quanh năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 29,
+      "water_g": 88.9,
+      "protein_g": 1.1,
+      "carbohydrates_g": 9.3,
+      "sugars_g": 2.5,
+      "fiber_g": 2.8,
+      "fat_g": 0.3
+    },
+    "vitamins": [
+      "Vitamin C (53.0 mg - khoảng 88% DV)",
+      "Vitamin B6 (0.08 mg)",
+      "Thiamine / Vitamin B1 (0.04 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (138 mg)",
+      "Canxi / Calcium (26 mg)",
+      "Sắt / Iron (0.6 mg)"
+    ],
+    "key_compounds": [
+      "Axit Citric (Tạo độ chua tự nhiên)",
+      "D-Limonene (Trong vỏ chanh)",
+      "Hesperidin và Eriocitrin"
+    ],
+    "potential_health_benefits": [
+      "Axit Citric hỗ trợ ngăn ngừa nguy cơ hình thành sỏi thận oxalate",
+      "Hỗ trợ tăng cường miễn dịch và hấp thu sắt từ thực vật",
+      "Cung cấp chất chống oxy hóa bảo vệ tế bào"
+    ],
+    "culinary_uses": [
+      "Pha nước chanh mật uống giải khát",
+      "Vắt lấy nước cốt làm sốt salad, ướp hải sản tiêu khử mùi",
+      "Bào bào vỏ chanh (Lemon Zest) làm hương liệu bánh quy"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ mịn sáng, cầm chắc tay và mọng nước",
+      "Tránh quả vỏ nhăn nheo héo xơ"
+    ],
+    "storage": [
+      "Nhiệt độ phòng được khoảng 1 tuần",
+      "Để túi kín trong ngăn mát tủ lạnh giữ được 3 - 4 tuần"
+    ],
+    "common_varieties": [
+      "Chanh Vàng Eureka",
+      "Chanh Meyer",
+      "Chanh Không Hạt Việt Nam"
+    ],
+    "cautions": [
+      "Axit trong chanh có thể gây mòn men răng nếu tiếp xúc trực tiếp quá thường xuyên"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Lemons, raw, without peel",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "lychee": {
+    "canonical_class": "lychee",
+    "names": {
+      "vi": "Vải / Vải thiều",
+      "en": "Lychee / Litchi"
+    },
+    "scientific_name": "Litchi chinensis",
+    "family": {
+      "scientific": "Sapindaceae",
+      "vi": "Họ Bồ hòn"
+    },
+    "description": "Vải là loại quả mọng nhiệt đới nổi tiếng với cùi thịt mọng nước ngọt sẫm, hương thơm quyến rũ và giàu vitamin C.",
+    "origin": "Miền Nam Trung Quốc và Bắc Việt Nam",
+    "distribution": "Trồng nổi tiếng tại Việt Nam (Thanh Hà, Lục Ngạn), Trung Quốc, Ấn Độ và Thái Lan.",
+    "appearance": {
+      "color": ["Vỏ đỏ sần rực rỡ"],
+      "shape": "Hình tròn hoặc hình tim nhỏ",
+      "size": "Đường kính 3 - 4 cm",
+      "peel": "Vỏ mỏng sần sùi mộc mạc",
+      "flesh": "Thịt cùi mọng nước màu trắng trong bọc quanh hạt nâu"
+    },
+    "taste": "Ngọt đậm đà, thơm dịu sang trọng",
+    "texture": "Giòn mọng nước",
+    "season": "Mùa hè (Tháng 5 đến tháng 7)",
+    "nutrition_per_100g": {
+      "calories_kcal": 66,
+      "water_g": 81.8,
+      "protein_g": 0.8,
+      "carbohydrates_g": 16.5,
+      "sugars_g": 15.2,
+      "fiber_g": 1.3,
+      "fat_g": 0.4
+    },
+    "vitamins": [
+      "Vitamin C (71.5 mg - khoảng 119% DV)",
+      "Niacin / Vitamin B3 (0.6 mg)",
+      "Folate (14 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (171 mg)",
+      "Đồng / Copper (0.15 mg)",
+      "Magie / Magnesium (10 mg)"
+    ],
+    "key_compounds": [
+      "Oligonol (Polyphenol trọng lượng phân tử thấp)",
+      "Rutanol",
+      "Epicatechin"
+    ],
+    "potential_health_benefits": [
+      "Cung cấp lượng Vitamin C phong phú giúp tăng cường sức đề kháng",
+      "Hợp chất Oligonol giúp hỗ trợ cải thiện lưu thông máu",
+      "Chứa polyphenol bảo vệ da khỏi tổn thương oxy hóa"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp quả tươi",
+      "Làm chè vải hạt sen, trà vải giải nhiệt mùa hè",
+      "Sấy khô làm vải khô (long nhãn vải)"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ màu đỏ tươi, cành lá tươi dính chùm",
+      "Quả cầm chắc tay, không bị thâm đen hay sâu đầu"
+    ],
+    "storage": [
+      "Gói giấy thoáng cất ngăn mát tủ lạnh giữ tươi 5 - 7 ngày",
+      "Bóc cùi đông lạnh để dùng quanh năm"
+    ],
+    "common_varieties": [
+      "Vải Thiều Lục Ngạn",
+      "Vải Thiều Thanh Hà",
+      "Vải Lai"
+    ],
+    "cautions": [
+      "Chứa chỉ số đường cao, tránh ăn quá nhiều lúc đói"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Lychees, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "mango": {
+    "canonical_class": "mango",
+    "names": {
+      "vi": "Xoài",
+      "en": "Mango"
+    },
+    "scientific_name": "Mangifera indica",
+    "family": {
+      "scientific": "Anacardiaceae",
+      "vi": "Họ Đào lộn hột"
+    },
+    "description": "Xoài được mệnh danh là 'vua của các loại trái cây nhiệt đới' nhờ hương vị ngọt thơm đặc trưng, thịt quả mịn mọng và hàm lượng Vitamin A, C dồi dào.",
+    "origin": "Ấn Độ và vùng Đông Nam Á",
+    "distribution": "Trồng phổ biến tại Ấn Độ, Trung Quốc, Thái Lan, Việt Nam, Mexico và Brazil.",
+    "appearance": {
+      "color": ["Vàng tươi khi chín", "Xanh mướt khi sống"],
+      "shape": "Hình thuôn thon, bầu bĩnh",
+      "size": "Chiều dài 10 - 20 cm, nặng từ 200 - 800g",
+      "peel": "Vỏ mỏng nhẵn bóng",
+      "flesh": "Thịt quả màu vàng cam mọng nước quanh hạt dẹp"
+    },
+    "taste": "Ngọt đậm thơm lừng khi chín, chua giòn khi sống",
+    "texture": "Mềm mịn mọng nước",
+    "season": "Rộ nhất từ tháng 3 đến tháng 7",
+    "nutrition_per_100g": {
+      "calories_kcal": 60,
+      "water_g": 83.5,
+      "protein_g": 0.8,
+      "carbohydrates_g": 15.0,
+      "sugars_g": 13.7,
+      "fiber_g": 1.6,
+      "fat_g": 0.4
+    },
+    "vitamins": [
+      "Vitamin C (36.4 mg - khoảng 60% DV)",
+      "Vitamin A (1082 IU - khoảng 22% DV)",
+      "Vitamin E (0.9 mg)",
+      "Vitamin B6 (0.12 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (168 mg)",
+      "Magie / Magnesium (10 mg)",
+      "Đồng / Copper (0.11 mg)"
+    ],
+    "key_compounds": [
+      "Mangiferin (Antioxidant mạnh mẽ)",
+      "Beta-Carotene",
+      "Lutein"
+    ],
+    "potential_health_benefits": [
+      "Hàm lượng Beta-Carotene và Vitamin A cao hỗ trợ thị lực",
+      "Mangiferin giúp bảo vệ tế bào khỏi stress oxy hóa",
+      "Chứa các enzyme tiêu hóa amylase hỗ trợ phân giải carbs"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp quả xoài chín",
+      "Làm gỏi xoài sống, xôi xoài nước cốt dừa",
+      "Xay sinh tố xoài, chế biến mứt dẻo xoài"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ căng mịn, tỏa mùi thơm nồng ở phần cuống",
+      "Nắn nhẹ cảm giác mềm đều tay là xoài chín ngon"
+    ],
+    "storage": [
+      "Xoài sống giữ nhiệt độ phòng để chín tự nhiên",
+      "Xoài chín cất tủ lạnh giữ tươi từ 3 - 5 ngày"
+    ],
+    "common_varieties": [
+      "Xoài Cát Hòa Lộc",
+      "Xoài Keo",
+      "Xoài Tượng",
+      "Xoài Úc"
+    ],
+    "cautions": [
+      "Nhựa vỏ xoài có thể gây kích ứng da nhẹ ở người có cơ địa nhạy cảm"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Mangos, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "orange": {
+    "canonical_class": "orange",
+    "names": {
+      "vi": "Cam",
+      "en": "Orange"
+    },
+    "scientific_name": "Citrus sinensis",
+    "family": {
+      "scientific": "Rutaceae",
+      "vi": "Họ Cam chanh"
+    },
+    "description": "Cam là loại quả họ cam chanh nổi tiếng nhất thế giới, là biểu tượng của Vitamin C, giúp bổ sung nước và chất chống oxy hóa giải khát tuyệt vời.",
+    "origin": "Đông Nam Á và miền Nam Trung Quốc",
+    "distribution": "Trồng nhiều ở Brazil, Mỹ (Florida & California), Trung Quốc, Tây Ban Nha và Việt Nam.",
+    "appearance": {
+      "color": ["Vàng cam rực rỡ", "Xanh ngả vàng"],
+      "shape": "Hình cầu tròn",
+      "size": "Đường kính 6 - 10 cm",
+      "peel": "Vỏ sần nhẹ chứa túi tinh dầu",
+      "flesh": "Thịt múi mọng nước màu cam hoặc đỏ (Blood orange)"
+    },
+    "taste": "Ngọt dịu xen lẫn vị chua thanh mát",
+    "texture": "Mọng nước, tép cam tươi",
+    "season": "Thu hoạch từ thu đến xuân năm sau",
+    "nutrition_per_100g": {
+      "calories_kcal": 47,
+      "water_g": 86.7,
+      "protein_g": 0.9,
+      "carbohydrates_g": 11.8,
+      "sugars_g": 9.4,
+      "fiber_g": 2.4,
+      "fat_g": 0.1
+    },
+    "vitamins": [
+      "Vitamin C (53.2 mg - khoảng 89% DV)",
+      "Thiamine / B1 (0.087 mg)",
+      "Folate / B9 (30 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (181 mg)",
+      "Canxi / Calcium (40 mg)",
+      "Magie / Magnesium (10 mg)"
+    ],
+    "key_compounds": [
+      "Hesperidin (Flavonoid hỗ trợ tim mạch)",
+      "Axit Citric",
+      "Beta-Cryptoxanthin"
+    ],
+    "potential_health_benefits": [
+      "Cung cấp lượng Vitamin C dồi dào hỗ trợ miễn dịch khỏe mạnh",
+      "Hesperidin giúp bảo vệ mạch máu và sức khỏe tim",
+      "Chứa chất xơ tự nhiên hỗ trợ đường ruột"
+    ],
+    "culinary_uses": [
+      "Vắt lấy nước ép cam tươi giải khát",
+      "Ăn trực tiếp nguyên múi",
+      "Làm bánh cam, mứt vỏ cam hoặc nộm salad"
+    ],
+    "how_to_choose": [
+      "Chọn quả mọng nước, cầm nặng tay",
+      "Vỏ nhẵn bóng, màu sắc tươi sáng"
+    ],
+    "storage": [
+      "Nhiệt độ phòng được khoảng 1 tuần",
+      "Bảo quản ngăn mát tủ lạnh giữ được 2 - 3 tuần"
+    ],
+    "common_varieties": [
+      "Cam Sành",
+      "Cam Vàng Valencia",
+      "Cam Navel",
+      "Cam Vinh"
+    ],
+    "cautions": [
+      "Người bị viêm loét dạ dày nặng nên tránh uống nước cam lúc đói"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Oranges, raw, all commercial varieties",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "papaya": {
+    "canonical_class": "papaya",
+    "names": {
+      "vi": "Đu đủ",
+      "en": "Papaya"
+    },
+    "scientific_name": "Carica papaya",
+    "family": {
+      "scientific": "Caricaceae",
+      "vi": "Họ Đu đủ"
+    },
+    "description": "Đu đủ là trái cây nhiệt đới giàu enzyme Papain tự nhiên giúp tiêu hóa đạm tốt, giàu Vitamin A, C và carotenoids.",
+    "origin": "Vùng nhiệt đới Châu Mỹ (Trung Mỹ và Mexico)",
+    "distribution": "Trồng rộng khắp các vùng nhiệt đới Châu Á, Châu Mỹ và Châu Phi.",
+    "appearance": {
+      "color": ["Vàng cam rực rỡ khi chín", "Xanh thẫm khi sống"],
+      "shape": "Hình thuôn dài hoặc mập tròn",
+      "size": "Chiều dài 15 - 30 cm, nặng từ 0.5 - 2kg",
+      "peel": "Vỏ mỏng nhẵn",
+      "flesh": "Thịt quả dẻo màu đỏ cam, khoang ruột chứa nhiều hạt đen nhỏ"
+    },
+    "taste": "Ngọt mát, thơm thanh nhẹ",
+    "texture": "Mềm dẻo, mịn màng",
+    "season": "Thu hoạch quanh năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 43,
+      "water_g": 88.1,
+      "protein_g": 0.5,
+      "carbohydrates_g": 10.8,
+      "sugars_g": 7.8,
+      "fiber_g": 1.7,
+      "fat_g": 0.3
+    },
+    "vitamins": [
+      "Vitamin C (60.9 mg - khoảng 101% DV)",
+      "Vitamin A (950 IU)",
+      "Folate / B9 (38 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (182 mg)",
+      "Magie / Magnesium (21 mg)",
+      "Canxi / Calcium (20 mg)"
+    ],
+    "key_compounds": [
+      "Enzyme Papain (Hỗ trợ tiêu hóa protein)",
+      "Lycopene",
+      "Beta-Carotene"
+    ],
+    "potential_health_benefits": [
+      "Enzyme Papain giúp êm dạ dày và hỗ trợ tiêu hóa tốt",
+      "Chất chống oxy hóa Lycopene hỗ trợ sức khỏe tim mạch",
+      "Giàu Vitamin C & A nâng cao đề kháng và dưỡng da"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp đu đủ chín tráng miệng",
+      "Làm gỏi đu đủ thái (Som Tum) hoặc gỏi bò khô từ đu đủ xanh",
+      "Xay sinh tố đu đủ với sữa tươi"
+    ],
+    "how_to_choose": [
+      "Chọn quả đu đủ chín cây vỏ ngả màu vàng ửng sọc",
+      "Nắn nhẹ tay thấy mềm đều, cuống còn dính nhựa tươi"
+    ],
+    "storage": [
+      "Đu đủ mỏ vịt để phòng 1 - 2 ngày cho chín đều",
+      "Đu đủ chín gọt vỏ bảo quản tủ lạnh 2 - 3 ngày"
+    ],
+    "common_varieties": [
+      "Đu đủ Hồng Điền",
+      "Đu đủ Đài Loan",
+      "Đu đủ Ruột Đỏ"
+    ],
+    "cautions": [
+      "Phụ nữ mang thai nên tránh ăn đu đủ sống/xanh vì nhựa đu đủ chứa latex có thể gây co bóp tử cung"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Papayas, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "pear": {
+    "canonical_class": "pear",
+    "names": {
+      "vi": "Lê",
+      "en": "Pear"
+    },
+    "scientific_name": "Pyrus communis",
+    "family": {
+      "scientific": "Rosaceae",
+      "vi": "Họ Hoa hồng"
+    },
+    "description": "Lê là loại trái cây ôn đới mọng nước, thanh mát, giàu chất xơ hòa tan Pectin và được ưa chuộng nhờ khả năng giải nhiệt thanh họng.",
+    "origin": "Châu Âu và Đông Á",
+    "distribution": "Trồng nhiều ở Trung Quốc, Mỹ, Ý, Argentina và các tỉnh miền núi phía Bắc Việt Nam.",
+    "appearance": {
+      "color": ["Vàng nhạt", "Xanh ngọc", "Nâu đồng (Lê phai)", "Đỏ phớt"],
+      "shape": "Hình quả lê thuôn dưới phình to",
+      "size": "Đường kính 6 - 9 cm",
+      "peel": "Vỏ mỏng bóng hoặc có đốm nâu nhẹ",
+      "flesh": "Thịt quả màu trắng trong, giòn mọng nước"
+    },
+    "taste": "Ngọt thanh, dịu mát",
+    "texture": "Giòn xốp mọng nước",
+    "season": "Mùa thu hoạch từ tháng 8 đến tháng 10",
+    "nutrition_per_100g": {
+      "calories_kcal": 57,
+      "water_g": 84.0,
+      "protein_g": 0.4,
+      "carbohydrates_g": 15.2,
+      "sugars_g": 9.8,
+      "fiber_g": 3.1,
+      "fat_g": 0.1
+    },
+    "vitamins": [
+      "Vitamin C (4.3 mg)",
+      "Vitamin K (4.4 mcg)",
+      "Vitamin B6 (0.03 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (116 mg)",
+      "Đồng / Copper (0.08 mg)",
+      "Magie / Magnesium (7 mg)"
+    ],
+    "key_compounds": [
+      "Chất xơ Pectin",
+      "Axit Arbutin",
+      "Quercetin"
+    ],
+    "potential_health_benefits": [
+      "Chất xơ dồi dào hỗ trợ hệ tiêu hóa vận hành trơn tru",
+      "Hỗ trợ làm dịu cổ họng và cấp nước cho cơ thể",
+      "Chỉ số đường huyết thấp (GI thấp) an toàn cho sức khỏe"
+    ],
+    "culinary_uses": [
+      "Ăn giòn tươi trực tiếp",
+      "Chưng lê đường phèn mật tính thanh họng",
+      "Ép nước lê hoặc hầm cùng thịt gia cầm"
+    ],
+    "how_to_choose": [
+      "Chọn quả cầm nặng tay, vỏ không có vết dập thâm sâu",
+      "Phần cổ lê hơi mềm nhẹ là dấu hiệu lê chín ngọt"
+    ],
+    "storage": [
+      "Nhiệt độ phòng được 3 - 5 ngày",
+      "Tủ lạnh bảo quản giòn ngon từ 2 - 3 tuần"
+    ],
+    "common_varieties": [
+      "Lê Đường",
+      "Lê Nâu Hàn Quốc",
+      "Bartlett / Williams",
+      "Anjou"
+    ],
+    "cautions": [
+      "Ăn quá nhiều lê một lúc có thể gây khó chịu bụng nhẹ ở người bụng yếu"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Pears, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "pineapple": {
+    "canonical_class": "pineapple",
+    "names": {
+      "vi": "Dứa / Thơm / Khóm",
+      "en": "Pineapple"
+    },
+    "scientific_name": "Ananas comosus",
+    "family": {
+      "scientific": "Bromeliaceae",
+      "vi": "Họ Dứa"
+    },
+    "description": "Dứa là loại quả nhiệt đới chứa enzyme Bromelain độc đáo hỗ trợ phân giải protein, hương vị chua ngọt nhiệt đới bùng nổ.",
+    "origin": "Khu vực Nam Mỹ (giữa Brazil và Paraguay)",
+    "distribution": "Trồng phổ biến ở Costa Rica, Philippines, Brazil, Thái Lan và Việt Nam (Tiền Giang, Kiên Giang).",
+    "appearance": {
+      "color": ["Vàng mắt mắt cam khi chín", "Mắt dứa nổi rõ"],
+      "shape": "Hình trụ hoặc quả trứng thon",
+      "size": "Chiều dài 15 - 25 cm, nặng 1 - 2.5kg",
+      "peel": "Vỏ cứng nhiều mắt nhọn",
+      "flesh": "Thịt quả màu vàng tươi mọng nước"
+    },
+    "taste": "Ngọt đậm xen vị chua sảng khoái",
+    "texture": "Giòn mọng nước",
+    "season": "Cho trái rộ nhất từ tháng 4 đến tháng 7",
+    "nutrition_per_100g": {
+      "calories_kcal": 50,
+      "water_g": 86.0,
+      "protein_g": 0.5,
+      "carbohydrates_g": 13.1,
+      "sugars_g": 9.9,
+      "fiber_g": 1.4,
+      "fat_g": 0.1
+    },
+    "vitamins": [
+      "Vitamin C (47.8 mg - khoảng 80% DV)",
+      "Thiamine / B1 (0.08 mg)",
+      "Vitamin B6 (0.11 mg)"
+    ],
+    "minerals": [
+      "Mangan / Manganese (0.93 mg - khoảng 46% DV)",
+      "Kali / Potassium (109 mg)",
+      "Magie / Magnesium (12 mg)"
+    ],
+    "key_compounds": [
+      "Enzyme Bromelain (Chống viêm tiêu đạm)",
+      "Axit Malic và Citric"
+    ],
+    "potential_health_benefits": [
+      "Enzyme Bromelain hỗ trợ quá trình tiêu hóa protein và giảm sưng viêm",
+      "Mangan phong phú hỗ trợ sức khỏe xương khớp",
+      "Giúp tăng cường sức đề kháng nhờ Vitamin C"
+    ],
+    "culinary_uses": [
+      "Ăn trực tiếp tươi xắt miếng",
+      "Nấu canh chua cá, làm dứa xào mực mặn",
+      "Ép nước dứa nguyên chất, pizza hải sản sốt dứa"
+    ],
+    "how_to_choose": [
+      "Mắt dứa nở to đều, màu vỏ chuyển vàng tươi từ đáy lên",
+      "Mùi thơm ngọt dịu đặc trưng ở cuống"
+    ],
+    "storage": [
+      "Quả nguyên giữ nhiệt độ phòng 2 - 3 ngày",
+      "Đã gọt vỏ cắt miếng bảo quản hộp kín tủ lạnh 3 - 5 ngày"
+    ],
+    "common_varieties": [
+      "Dứa Queen (Dứa Nữ Hoàng)",
+      "Dứa MD2 (Dứa Mật)",
+      "Khóm Cầu Kè"
+    ],
+    "cautions": [
+      "Bromelain có thể gây rát rát lưỡi nhẹ nếu ăn lượng lớn lúc rảnh"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Pineapples, raw, all varieties",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "pomegranate": {
+    "canonical_class": "pomegranate",
+    "names": {
+      "vi": "Lựu",
+      "en": "Pomegranate"
+    },
+    "scientific_name": "Punica granatum",
+    "family": {
+      "scientific": "Lythraceae",
+      "vi": "Họ Bàng"
+    },
+    "description": "Lựu là loại trái cây chứa hàng trăm tép hạt màu ngọc hồng thẫm lấp lánh, nổi tiếng thế giới nhờ chất chống oxy hóa mạnh mẽ Punicalagin.",
+    "origin": "Vùng đất Iran trải dài tới vùng Tây Tạng",
+    "distribution": "Trồng nhiều ở Iran, Ấn Độ, Địa Trung Hải, Mỹ (California) và Việt Nam.",
+    "appearance": {
+      "color": ["Vỏ đỏ hồng / đỏ thẫm", "Hạt đỏ ngọc mọng"],
+      "shape": "Hình cầu tròn nén có vương miện đài hoa ở đỉnh",
+      "size": "Đường kính 7 - 12 cm",
+      "peel": "Vỏ da dầy bọc nhiều múi hạt",
+      "flesh": "Các hạt lựu mọng nước màu đỏ ngọc"
+    },
+    "taste": "Ngọt thanh hoặc chua ngọt ngào",
+    "texture": "Tép hạt mọng nước giòn rụm",
+    "season": "Từ tháng 9 đến tháng 2 năm sau",
+    "nutrition_per_100g": {
+      "calories_kcal": 83,
+      "water_g": 77.9,
+      "protein_g": 1.7,
+      "carbohydrates_g": 18.7,
+      "sugars_g": 13.7,
+      "fiber_g": 4.0,
+      "fat_g": 1.2
+    },
+    "vitamins": [
+      "Vitamin C (10.2 mg)",
+      "Vitamin K (16.4 mcg - khoảng 14% DV)",
+      "Folate / B9 (38 mcg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (236 mg)",
+      "Phốt pho / Phosphorus (36 mg)",
+      "Magie / Magnesium (12 mg)"
+    ],
+    "key_compounds": [
+      "Punicalagins (Antioxidant cực mạnh ở vỏ & nước lựu)",
+      "Punicic Acid (Axit béo có lợi)",
+      "Anthocyanins"
+    ],
+    "potential_health_benefits": [
+      "Punicalagin hỗ trợ giảm stress oxy hóa và bảo vệ mạch máu",
+      "Hỗ trợ giảm huyết áp và duy trì sức khỏe tim mạch",
+      "Hỗ trợ kháng viêm và cải thiện chức năng vận động"
+    ],
+    "culinary_uses": [
+      "Tách hạt ăn trực tiếp tráng miệng",
+      "Ép nước lựu đỏ tươi cao cấp",
+      "Rắc hạt lựu trang trí món salad, cocktail hoặc đồ ngọt"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ phẳng căng góc cạnh nhẹ (dấu hiệu hạt dầy mọng)",
+      "Cầm nặng tay so với kích thước"
+    ],
+    "storage": [
+      "Quả nguyên bảo quản nhiệt độ phòng 1 - 2 tuần",
+      "Tách hạt sẵn cất hộp tủ lạnh giữ được 5 - 7 ngày"
+    ],
+    "common_varieties": [
+      "Lựu Thái Ruột Đỏ",
+      "Lựu Ấn Độ",
+      "Lựu Bạch (Việt Nam)"
+    ],
+    "cautions": [
+      "Nước lựu có thể tương tác với một số thuốc hạ huyết áp, nên lưu ý nếu đang điều trị"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Pomegranates, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "strawberry": {
+    "canonical_class": "strawberry",
+    "names": {
+      "vi": "Dâu tây",
+      "en": "Strawberry"
+    },
+    "scientific_name": "Fragaria × ananassa",
+    "family": {
+      "scientific": "Rosaceae",
+      "vi": "Họ Hoa hồng"
+    },
+    "description": "Dâu tây là loại quả mọng quyến rũ có màu đỏ mọng tươi, giàu Vitamin C, Axit Ellagic và hương thơm ngọt ngào được yêu thích trên toàn cầu.",
+    "origin": "Châu Âu (Pháp vào thế kỷ 18)",
+    "distribution": "Trồng phổ biến ở Mỹ, Trung Quốc, Tây Ban Nha, Nhật Bản, Hàn Quốc và Việt Nam (Đà Lạt, Mộc Châu).",
+    "appearance": {
+      "color": ["Đỏ tươi đến đỏ thẫm bóng"],
+      "shape": "Hình nón tim nhỏ xinh",
+      "size": "Chiều dài 2 - 5 cm",
+      "peel": "Bề mặt đính nhiều hạt dính nhỏ",
+      "flesh": "Thịt quả xốp mọng nước màu đỏ phớt trắng"
+    },
+    "taste": "Chua ngọt ngào, thơm dịu dễ chịu",
+    "texture": "Mềm xốp mọng nước",
+    "season": "Từ tháng 11 đến tháng 4 năm sau",
+    "nutrition_per_100g": {
+      "calories_kcal": 32,
+      "water_g": 90.9,
+      "protein_g": 0.7,
+      "carbohydrates_g": 7.7,
+      "sugars_g": 4.9,
+      "fiber_g": 2.0,
+      "fat_g": 0.3
+    },
+    "vitamins": [
+      "Vitamin C (58.8 mg - khoảng 98% DV)",
+      "Folate / B9 (24 mcg)",
+      "Vitamin B6 (0.047 mg)"
+    ],
+    "minerals": [
+      "Mangan / Manganese (0.386 mg)",
+      "Kali / Potassium (153 mg)",
+      "Magie / Magnesium (13 mg)"
+    ],
+    "key_compounds": [
+      "Ellagic Acid (Chống oxy hóa polyphenol)",
+      "Pelargonidin (Sắc tố màu đỏ)",
+      "Proanthocyanidins"
+    ],
+    "potential_health_benefits": [
+      "Hàm lượng calo thấp nhưng giàu chất chống oxy hóa giúp kiểm soát cân nặng",
+      "Hỗ trợ cải thiện mức độ nhạy insulin và kiểm soát đường huyết",
+      "Vitamin C cao hỗ trợ da sáng khỏe tự nhiên"
+    ],
+    "culinary_uses": [
+      "Ăn tươi trực tiếp hoặc chấm kem tươi, chocolate",
+      "Làm bánh dâu tây, sinh tố dâu, mứt dâu",
+      "Trộn salad hoa quả mát lạnh"
+    ],
+    "how_to_choose": [
+      "Chọn quả đỏ đều thân, không có mảng trắng xanh",
+      "Tai lá xanh tươi nguyên vẹn dính ở đầu quả"
+    ],
+    "storage": [
+      "Bảo quản ngăn mát tủ lạnh 2 - 4°C từ 2 - 4 ngày",
+      "Chỉ rửa nước ngay trước khi thưởng thức"
+    ],
+    "common_varieties": [
+      "Dâu Tây Đà Lạt",
+      "Dâu Hàn Quốc (Seolhyang)",
+      "Dâu Nhật Bản (Skyberry)"
+    ],
+    "cautions": [
+      "Là một trong các loại quả mọng dễ gây dị ứng nhẹ ở trẻ nhỏ nhạy cảm"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Strawberries, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "tomato": {
+    "canonical_class": "tomato",
+    "names": {
+      "vi": "Cà chua",
+      "en": "Tomato"
+    },
+    "scientific_name": "Solanum lycopersicum",
+    "family": {
+      "scientific": "Solanaceae",
+      "vi": "Họ Cà"
+    },
+    "description": "Cà chua là nguồn cung cấp sắc tố Lycopene chống oxy hóa dồi dào hàng đầu, được sử dụng như thực phẩm gia vị không thể thiếu trong ẩm thực toàn cầu.",
+    "origin": "Vùng núi Andes thuộc Nam Mỹ",
+    "distribution": "Trồng khắp mọi quốc gia trên thế giới.",
+    "appearance": {
+      "color": ["Đỏ mọng", "Vàng", "Cam", "Xanh khi sống"],
+      "shape": "Hình cầu tròn hoặc trơn bầu",
+      "size": "Đường kính 3 - 8 cm",
+      "peel": "Vỏ mỏng nhẵn bóng",
+      "flesh": "Thịt quả mọng nước chứa hạt trong khoang dịch"
+    },
+    "taste": "Chua ngọt thanh mát tự nhiên",
+    "texture": "Mềm mọng nước",
+    "season": "Cho trái quanh năm",
+    "nutrition_per_100g": {
+      "calories_kcal": 18,
+      "water_g": 94.5,
+      "protein_g": 0.9,
+      "carbohydrates_g": 3.9,
+      "sugars_g": 2.6,
+      "fiber_g": 1.2,
+      "fat_g": 0.2
+    },
+    "vitamins": [
+      "Vitamin C (13.7 mg - khoảng 23% DV)",
+      "Vitamin K1 (7.9 mcg)",
+      "Folate / B9 (15 mcg)",
+      "Vitamin A (833 IU)"
+    ],
+    "minerals": [
+      "Kali / Potassium (237 mg)",
+      "Mangan / Manganese (0.11 mg)",
+      "Magie / Magnesium (11 mg)"
+    ],
+    "key_compounds": [
+      "Lycopene (Sắc tố carotenoid chống oxy hóa cực mạnh)",
+      "Beta-Carotene",
+      "Naringenin"
+    ],
+    "potential_health_benefits": [
+      "Lycopene hỗ trợ bảo vệ tim mạch và giảm rủi ro stress tế bào",
+      "Hỗ trợ bảo vệ làn da khỏi tác hại của tia UV nắng",
+      "Nguồn cung cấp Vitamin K và Kali tốt cho sức khỏe cơ thể"
+    ],
+    "culinary_uses": [
+      "Nấu nước sốt cà chua, sốt mì Ý, canh chua",
+      "Ăn sống trong nộm salad, làm kẹp sandwich / burger",
+      "Ép nước cà chua dưỡng da"
+    ],
+    "how_to_choose": [
+      "Chọn quả vỏ căng đỏ đều, nắn nhẹ cảm giác chắc chắn",
+      "Phần cuống còn xanh tươi và tỏa mùi thơm nhẹ"
+    ],
+    "storage": [
+      "Bảo quản ở nhiệt độ phòng để giữ nguyên hương vị tự nhiên",
+      "Tránh để tủ lạnh quá lâu vì sẽ làm dại vị cà chua"
+    ],
+    "common_varieties": [
+      "Cà chua Bi / Cherry",
+      "Cà chua Beef",
+      "Cà chua Trứng Cút"
+    ],
+    "cautions": [
+      "Lá và thân cây cà chua chứa solanine độc, không được ăn"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Tomatoes, red, ripe, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  },
+
+  "watermelon": {
+    "canonical_class": "watermelon",
+    "names": {
+      "vi": "Dưa hấu",
+      "en": "Watermelon"
+    },
+    "scientific_name": "Citrullus lanatus",
+    "family": {
+      "scientific": "Cucurbitaceae",
+      "vi": "Họ Bầu bí"
+    },
+    "description": "Dưa hấu chứa tới 92% là nước, là loại quả giải nhiệt số 1 mùa hè, giàu axit amin Citrulline và hợp chất chống oxy hóa Lycopene.",
+    "origin": "Miền Nam Châu Phi",
+    "distribution": "Trồng phổ biến ở Trung Quốc, Thổ Nhĩ Kỳ, Ấn Độ, Brazil và Việt Nam (Long An, Hải Dương).",
+    "appearance": {
+      "color": ["Vỏ xanh sọc đen", "Ruột đỏ tươi hoặc vàng"],
+      "shape": "Hình cầu tròn hoặc hình bầu dục lớn",
+      "size": "Đường kính 20 - 35 cm, nặng từ 2 - 10kg",
+      "peel": "Vỏ dầy vỏ cứng nhẵn",
+      "flesh": "Thịt ruột nhiều nước chứa hạt đen nhỏ (hoặc không hạt)"
+    },
+    "taste": "Ngọt mát sảng khoái, mọng nước",
+    "texture": "Giòn xốp mọng nước",
+    "season": "Rộ nhất vào mùa hè và dịp Tết Nguyên Đán",
+    "nutrition_per_100g": {
+      "calories_kcal": 30,
+      "water_g": 91.5,
+      "protein_g": 0.6,
+      "carbohydrates_g": 7.6,
+      "sugars_g": 6.2,
+      "fiber_g": 0.4,
+      "fat_g": 0.2
+    },
+    "vitamins": [
+      "Vitamin C (8.1 mg)",
+      "Vitamin A (569 IU)",
+      "Vitamin B5 / Pantothenic acid (0.22 mg)"
+    ],
+    "minerals": [
+      "Kali / Potassium (112 mg)",
+      "Magie / Magnesium (10 mg)",
+      "Đồng / Copper (0.04 mg)"
+    ],
+    "key_compounds": [
+      "Lycopene (Hàm lượng cực cao)",
+      "Citrulline (Axit amin hỗ trợ giãn mạch)",
+      "Cucurbitacin E"
+    ],
+    "potential_health_benefits": [
+      "Cấp nước và bù đắp điện giải giải nhiệt hiệu quả",
+      "Axit amin Citrulline giúp hỗ trợ giảm đau mỏi cơ bắp sau vận động",
+      "Lycopene hỗ trợ bảo vệ sức khỏe hệ tim mạch"
+    ],
+    "culinary_uses": [
+      "Xắt miếng ăn tươi giải khát",
+      "Ép nước dưa hấu nguyên chất mát lạnh",
+      "Làm thạch dưa hấu, kem dưa hấu hoặc vỏ dưa muối chua"
+    ],
+    "how_to_choose": [
+      "Vỗ vào quả nghe tiếng bộp bộp đầm tay",
+      "Phần đáy quả có vệt màu vàng nhạt (đáy tiếp xúc đất chín cây)",
+      "Cuống dưa héo quắt nhỏ"
+    ],
+    "storage": [
+      "Quả nguyên để nơi thoáng mát được 1 - 2 tuần",
+      "Đã bổ miếng bọc màng thực phẩm cất tủ lạnh ăn trong 2 - 3 ngày"
+    ],
+    "common_varieties": [
+      "Dưa hấu Không Hạt",
+      "Dưa hấu Ruột Vàng",
+      "Dưa hấu Hắc Mỹ Nhân"
+    ],
+    "cautions": [
+      "Chứa nhiều nước, tránh ăn quá nhiều ngay trước khi đi ngủ"
+    ],
+    "sources": [
+      {
+        "title": "USDA FoodData Central - Watermelon, raw",
+        "url": "https://fdc.nal.usda.gov/"
+      }
+    ]
+  }
+}

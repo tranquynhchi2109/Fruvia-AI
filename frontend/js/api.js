@@ -70,5 +70,51 @@ const ApiClient = {
       }
       throw error;
     }
+  },
+
+  /**
+   * Fetch full Fruit Knowledge Base profile from backend by canonical_class
+   * @param {string} canonicalClass
+   * @returns {Promise<object>}
+   */
+  async getFruitDetails(canonicalClass) {
+    if (!canonicalClass) {
+      throw new Error("canonicalClass is required");
+    }
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+    const safeSlug = encodeURIComponent(canonicalClass.trim().toLowerCase());
+
+    try {
+      const response = await fetch(`${CONFIG.API_BASE_URL}/api/fruits/${safeSlug}`, {
+        method: "GET",
+        headers: { "Accept": "application/json" },
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
+
+      if (response.status === 404) {
+        const notFoundErr = new Error(`Fruit knowledge not found for '${canonicalClass}'`);
+        notFoundErr.status = 404;
+        throw notFoundErr;
+      }
+
+      if (!response.ok) {
+        const err = new Error(`HTTP error ${response.status}`);
+        err.status = response.status;
+        throw err;
+      }
+
+      return await response.json();
+    } catch (error) {
+      clearTimeout(timeoutId);
+      if (error.name === "AbortError") {
+        const timeoutError = new Error("Request to fetch fruit knowledge timed out.");
+        timeoutError.status = 408;
+        throw timeoutError;
+      }
+      throw error;
+    }
   }
 };

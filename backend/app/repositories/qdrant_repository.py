@@ -147,7 +147,8 @@ class QdrantRepository:
             for point in scroll_res:
                 payload = getattr(point, "payload", {}) or {}
                 original_cls = str(payload.get("original_class", "unknown"))
-                canonical_cls, _ = resolve_class_names(original_cls, self.class_mapping)
+                source_ds = str(payload.get("dataset_name") or payload.get("source_dataset") or "unknown")
+                canonical_cls, _ = resolve_class_names(original_cls, self.class_mapping, source_ds)
                 counts[canonical_cls] = counts.get(canonical_cls, 0) + 1
             return dict(sorted(counts.items(), key=lambda x: x[1], reverse=True))
         except Exception as e:
@@ -212,14 +213,27 @@ class QdrantRepository:
                     similarity_score = float(getattr(hit, "score", 0.0))
 
                     original_cls = str(payload.get("original_class", "unknown"))
-                    canonical_cls, display_name = resolve_class_names(
-                        original_cls, self.class_mapping
+                    source_ds = str(
+                        payload.get("dataset_name")
+                        or payload.get("source_dataset")
+                        or "fruits-360-original-size"
                     )
+
+                    # Prefer payload canonical_class if present, else resolve dynamically
+                    payload_canonical = payload.get("canonical_class")
+                    if payload_canonical and str(payload_canonical).strip():
+                        canonical_cls = str(payload_canonical).strip().lower()
+                        display_name = str(payload.get("display_name") or canonical_cls.title())
+                    else:
+                        canonical_cls, display_name = resolve_class_names(
+                            original_cls, self.class_mapping, source_ds
+                        )
 
                     res = RetrievalResult(
                         original_class=original_cls,
                         canonical_class=canonical_cls,
                         display_name=display_name,
+                        source_dataset=source_ds,
                         filename=str(payload.get("filename", "unknown")),
                         relative_path=str(payload.get("relative_path", "")),
                         original_split=str(
